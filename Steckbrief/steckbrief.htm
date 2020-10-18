@@ -6,25 +6,69 @@
 <style>
 body {
 	font-family:arial;
-	font-size: small;
+	font-size: medium;
 	background: #EBC8B2;
 }
 
 h1 {
 	text-align:center;
+	font-size:xx-large;
 	font-family:Snell Roundhand;
+	text-decoration-line: underline;
+    text-decoration-style: dotted;
+    text-decoration-color:#804237;
 }
 
 h3 {
-	font-size:medium;
+	font-size:large;
 	font-family:Snell Roundhand;
+	text-decoration-line: underline;
+    text-decoration-style: dotted;
+    text-decoration-color:#ab7a6c;
 }
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+} 
+
+nav li {
+  list-style: none;
+  margin: 0.5em;
+  padding: 0.5em;
+  font-size: 1.5em;
+  border:#804237 1px solid; 
+}
+
+nav a {
+    text-decoration: none; 
+    font-weight: bold;
+	color: black;
+    background-color:#ab7a6c;
+	padding: 0.2em;
+	border:#804237
+  }
+  nav a:focus,
+  nav a:hover,
+  nav a:active {    
+    text-decoration:underline;
+  }
 </style>
 </head>
 <body>
 	<title>Steckbrief</title>
 
 	<h1>Steckbrief</h1>
+		
+	<nav>
+		<ul>
+		   <li><a href="steckbrief.htm">Über mich</a></li>
+		   <li><a href="Portfolio.htm">Mein Portfolio</a></li>
+		   <li><a href="foto1.jpg">Meine Arbeit 1</a></li>
+	   </ul>
+	 </nav>
+	
+	
 		<ol>
 						<li><h3>Name:</h3> Gina Maria Crivellin</li>
 						<br>
@@ -37,8 +81,5 @@ h3 {
 						<li><h3>Hobbys:</h3> Bodybuilding,Kochen,Essen,Yoga</li>
 		</ol>
 
-	<a href="#">Link zu Aufgabe 2</a>
-	<br>
-	<a href="#">Link zu Aufgabe 1</a>
 </body>
 </html>
