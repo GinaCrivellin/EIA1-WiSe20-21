@@ -8,6 +8,7 @@ body {
 	font-family:arial;
 	font-size: medium;
 	background: #EBC8B2;
+	text-align: center;
 }
 
 h1 {
@@ -68,6 +69,12 @@ nav a {
   nav a:active {    
     text-decoration:underline;
   }
+
+.flex-container {
+  display:flex;
+  flex-grow: 3;
+  justify-content:center;
+}
 </style>
 </head>
 <body>
@@ -86,23 +93,47 @@ nav a {
 
 		<h2>Title: Perspectives through colours</h2>
 
-	<img src="assets/Arbeit1.jpg" height="500px" width="500px">
+			<div class="flex-container">
+				<div><img src="assets/Arbeit1.jpg" height="300px" width="300px" align="left"></div>
+				<div><img src="assets/Arbeit2.jpg" height="300px" width="300px"align="middle"></div>
+				<div><img src="assets/Arbeit3.jpg" height="300px" width="300px"align="right"></div>
+			</div>
 
-	<img src="assets/Arbeit2.jpg" height="500px" width="500px">
-
-	<img src="assets/Arbeit3.jpg" height="500px" width="500px">
+		<p>Used:Procreate</p>
 
 		<h2>Title: Quotes in shifted reality</h2>
 
+		<br>
+			<div class="flex-container">
+				<div><img src="assets/Arbeit4.jpg" height="300px" width="300px" align="left"></div>
+				<div><img src="assets/Arbeit5.jpg" height="300px" width="300px"align="middle"></div>
+				<div><img src="assets/Arbeit6.jpg" height="300px" width="300px"align="right"></div>
+			</div>
+
+		<p>Used:Procreate</p>
 			<br>
 
-	<img src="assets/Arbeit4.jpg" height="500px" width="500px">
+		<h2>Title: Workout Videos</h2>
 
-	<img src="assets/Arbeit5.jpg" height="500px" width="500px">
+			<div class="flex-container">
+				<div>
+					<video width="300" height="300" controls>
+						<source src="assets/Arbeit7.MP4" type="video/mp4">
+					</video>
+				</div>
+				<div>
+					<video width="300" height="300" controls>
+						<source src="assets/Arbeit8.MP4" type="video/mp4">
+					</video>	
+				</div>
+				<div>
+					<video width="300" height="300" controls>
+						<source src="assets/Arbeit9.MP4" type="video/mp4">
+					</video>
+				</div>
+			</div>
 
-	<img src="assets/Arbeit6.jpg" height="500px" width="500px">
-
-			<br>
+			<p>Used:Adobe AE, Adobe Pr</p>
 
 	<a href="https://github.com/GinaCrivellin/EIA1-WiSe20-21/blob/main/Steckbrief/02_Portfolio.htm">Link zu Repository</a>
 </body>
