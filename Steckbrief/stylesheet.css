@@ -5,7 +5,11 @@ body {
 
 p{
   font-size: larger;
+}
 
+p2{
+  font-size: 10px;
+  color: rgb(145, 144, 144);
 }
 
 h1{
@@ -25,6 +29,13 @@ h2{
 h3{
     font-size: 50px;
     text-align: center;
+}
+
+h4{
+  font-size: 40px;
+    text-align: center;
+    width: 800px;
+
 }
 
 #Font-Headline{
@@ -73,7 +84,7 @@ ul {
 .nav2{
   overflow: hidden;
   position: absolute;
-  bottom: 35%;
+  bottom: 40%;
   left: 43%;
 }
 
@@ -92,23 +103,24 @@ ul {
 }
 
 
-.flexbox {width: 400px; height:400px; border-radius:50%; }
+.flexbox {
+  width: 400px; 
+  height:400px; 
+  border-radius:50%;
+  margin-top: -70px; 
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
 .flexstyle {
     background-color: rgb(250, 191, 28);
-    margin-top: -20%; 
     padding: 70px;
-    margin: auto;
 
 }
-.flexitem { margin-top:0%; text-align:center; }  
+.flexitem { 
+  margin-top:0%; 
+  text-align:center; }  
 
-.flex-container1{
-  display:flex;
-  flex-direction: column;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
 .flex-container2{
   width: 800px;
@@ -121,9 +133,7 @@ ul {
   display:flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
-
-
+  align-items: left;
 }
 
 .abgrenzung{
@@ -133,4 +143,31 @@ ul {
   margin: auto;
   background-color: black;
   height: 2px;
+}
+
+table{
+  text-align: left;
+  margin: auto;
+  padding: 10px;
+
+}
+
+form{
+  text-align: left;
+  margin: auto;
+  font-size: larger;
+}
+
+input{
+  font-size: larger;
+  background-color: rgb(158, 158, 158);
+}
+
+::placeholder{
+  color: white;
+}
+
+select{
+  font-size: larger;
+
 }
