@@ -23,12 +23,21 @@ h1{
 }
 
 .flexitem{
-    display:block;
     justify-content:left;
-    margin-top: 5%;
-    margin-right: 30%;
     position: absolute;
-    background-color: tomato;
+    display: block;
+    top: 70px;
+    right: 500px;
+}
+
+label{
+    color: white;
+}
+
+button{
+    margin:5px;
+    padding: 5px;
+    font-size: 12px;
 }
 
 </style>
@@ -58,6 +67,30 @@ h1{
                         <br>
                         <input type="text">
                     </div>
+
+                    <br>
+
+                    <div>
+                        <label>Dein Wunsch an den Weihnachtsmann:</label>
+                        <br>
+                        <input type="text">
+                    </div>
+
+                    <br>
+
+                    <div>
+                        <label>Warst du auch brav dieses Jahr?</label>
+                        <br>
+                        <br>
+                            <label>Ja</label>
+                            <input type="radio" name="ja_nein" checked>
+                            <label>Nein</label>
+                            <input type="radio" name="ja_nein" checked>
+                    </div>
+
+                    <br>
+
+                    <button>Abschicken</button>
 
 
                 </form>
