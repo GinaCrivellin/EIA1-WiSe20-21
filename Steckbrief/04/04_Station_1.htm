@@ -13,23 +13,22 @@ h2{
 }
 
 .flexbox-Karte{
-    display: flex;
-    align-items: center;
+    position: relative;
     justify-content: center;
-    margin-top: 50%;
-    margin-bottom: 50%;
+    align-items: center;
+    transform: translate(50%,50%);
 }
 
 .KartenelementP{
     position: absolute;
     right: 270px;
-    top: 760px;
+    top: 200px;
 }
 
 .KartenelementB{
     position: absolute;
     right: 690px;
-    top: 460px;
+    top: -70px;
 }
 
 .Schrift{
@@ -37,20 +36,24 @@ h2{
     top: 100px;
     color: white;
     font-family: cursive;
+    top: 70px;
+    left: 40px;
 }
 
 .Schrift2{
     position: absolute;
-    top: 200px;
     color: white;
     font-family: cursive;
+    top: 170px;
+    left: 40px;
 }
 
 .Schrift3{
     position: absolute;
-    top: 230px;
     color: white;
     font-family: cursive;
+    top: 200px;
+    left: 40px;
 }
 </style>
 </head>
@@ -63,15 +66,16 @@ h2{
             <img src="assets/pinguin.png">
         </div>
 
-            <h1 class="Schrift flexbox-Karte">
-                Merry Christmas</h1>
+            <h1 class="Schrift">
+                Merry Christmas!
+            </h1>
 
-            <h2 class="Schrift2 flexbox-Karte">
+            <h2 class="Schrift2">
                 have yourself a merry little christmas!
             </h2>
 
-            <h2 class="Schrift3 flexbox-Karte">
-             celebrate it with the ones you love and eat a lot of cookies!
+            <h2 class="Schrift3">
+                celebrate it with the ones you love and eat a lot of cookies!
             </h2>
 
         <div class="KartenelementB">
