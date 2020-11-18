@@ -22,3 +22,17 @@ for (var [country,values] of Object.entries(countries)) {
     console.log("Für " + country + " hat sich 2018 im Vergleich zu 2008 die Emission um " + (newer/old*100) + "% verändert") 
     console.log("2018 im Vergleich zu 2008 sind das "+ (newer-old) +"kg CO2")
 }
+
+var europe : number = 4209.3
+var europe08 : number = 4965.7
+
+var australia : number = 2100.5
+var australia08 : number = 1993
+
+var total : number europe + australia 
+
+console.log("Die Emission von Europa ist: " + europe + "kg CO2")
+console.log("Relativ zur Gesamtemission der Welt verursacht Europa damit "+ (europa/total*100) + "%")
+console.log("Für Europa hat sich 2018 im Vergleich zu 2008 die Emission um " + (europa/europa08*100) + "% verändert") 
+console.log("2018 im Vergleich zu 2008 sind das "+ (europa-europa08) +"kg CO2")
+
