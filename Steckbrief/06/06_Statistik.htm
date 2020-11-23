@@ -9,6 +9,7 @@
     <script src="06_script.js" defer></script>
 </head>
 <body>
+    
     <nav>
         <img src="images/europe.png" class="europe">
         <img src="images/northamerica.png" class="northamerica">
@@ -18,10 +19,15 @@
         <img src="images/australia.png" class="australia">
     </nav>
 
-    <h1 id="ContinentHeading">
-        Carbon Dioxide Emissions in Europe
+    <h1>
+        Carbon Dioxide Emissions in <span id="titleRegion">Europe</span>
     </h1>
 
+            
+    <div class="chartWrapper">
+        <div class="chart"></div>
+    </div>
+    
     <main>
         <section>
             <h2>4209.3</h2>
@@ -49,5 +55,6 @@
     </footer>
     
 </body>
+
 
 </html>
