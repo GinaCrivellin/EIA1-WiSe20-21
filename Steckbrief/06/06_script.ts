@@ -18,26 +18,26 @@
 
     console.log(Total)
 
-    var europeRel: number = Math.round(Europa18/Total*100)+ "%";
-    var australiaRel: number = Math.round(Australien18/Total)*100 +"%";
-    var asiaRel: number = Math.round(Asien18/Total*100) + "%";
-    var southAmericaRel: number = Math.round(SüdAmerica18/Total*100) + "%";
-    var northAmericaRel: number = Math.round(NordAmerica18/Total*100) + "%";
-    var africaRel: number = Math.round(Africa18/Total*100) + "%";
+    var europeRel: string = Math.round(Europa18/Total*100)+ "%";
+    var australiaRel: string = Math.round(Australien18/Total*100) +"%";
+    var asiaRel: string = Math.round(Asien18/Total*100) + "%";
+    var southAmericaRel: string = Math.round(SüdAmerica18/Total*100) + "%";
+    var northAmericaRel: string = Math.round(NordAmerica18/Total*100) + "%";
+    var africaRel: string = Math.round(Africa18/Total*100) + "%";
 
-    var europeGrow: number = Math.round(Europa08/Europa18*100) + "%";
-    var australiaGrow: number = Math.round(Australien08/Australien18*100) + "%";
-    var asiaGrow: number = Math.round(Asien08/Asien18) + "%";
-    var southAmericaGrow: number = Math.round(SüdAmerica08/SüdAmerica18*100) + "%";
-    var northAmericaGrow: number = Math.round(NordAmerica08/NordAmerica18*100) + "%";
-    var africaGrow: number = Math.round(Africa08/Africa18*100) + "%" ;
+    var europeGrow: string = Math.round(Europa18/Europa08*100) + "%";
+    var australiaGrow: string = Math.round(Australien18/Australien08*100) + "%";
+    var asiaGrow: string = Math.round(Asien18/Asien08*100) + "%";
+    var southAmericaGrow: string = Math.round(SüdAmerica18/SüdAmerica08*100) + "%";
+    var northAmericaGrow: string = Math.round(NordAmerica18/NordAmerica08*100) + "%";
+    var africaGrow: string = Math.round(Africa08/Africa18*100) + "%" ;
 
-    var europeMinus: number = Math.round(Europa18-Europa08);
-    var australiaMinus: number = Math.round(Australien18-Australien08);
-    var asiaMinus: number = Math.round(Asien18-Asien08);
-    var southAmericaMinus: number = Math.round(SüdAmerica18-SüdAmerica08);
-    var northAmericaMinus: number = Math.round(NordAmerica18-NordAmerica08);
-    var africaMinus: number = Math.round(Africa18-Africa08);
+    var europeMinus: string = Math.round(Europa18-Europa08) + " kg CO2";
+    var australiaMinus: string = Math.round(Australien18-Australien08) + " kg CO2";
+    var asiaMinus: string = Math.round(Asien18-Asien08) + " kg CO2";
+    var southAmericaMinus: string = Math.round(SüdAmerica18-SüdAmerica08) + " kg CO2";
+    var northAmericaMinus: string = Math.round(NordAmerica18-NordAmerica08) + " kg CO2";
+    var africaMinus: string = Math.round(Africa18-Africa08) + " kg CO2";
 
 
 
@@ -52,6 +52,8 @@ function myFunctionE(){
     document.querySelector("#h23").innerHTML= europeGrow ;
 
     document.querySelector("#h24").innerHTML= europeMinus ;
+
+    document.querySelector(".chart").setAttribute('style', 'height:' + (Europa18/Total*100) + '%')
 }
 
 document.querySelector(".europe").addEventListener("click", myFunctionE);
@@ -69,6 +71,8 @@ function myFunctionN(){
     document.querySelector("#h23").innerHTML= northAmericaGrow ;
 
     document.querySelector("#h24").innerHTML= northAmericaMinus ;
+
+    document.querySelector(".chart").setAttribute('style', 'height:' + (NordAmerica18/Total*100) + '%')
 }
 
 document.querySelector(".northamerica").addEventListener("click", myFunctionN);
@@ -85,6 +89,8 @@ function myFunctionS(){
     document.querySelector("#h23").innerHTML= southAmericaGrow ;
 
     document.querySelector("#h24").innerHTML= southAmericaMinus ;
+
+    document.querySelector(".chart").setAttribute('style', 'height:' + (SüdAmerica18/Total*100) + '%')
 }
 
 document.querySelector(".southamerica").addEventListener("click", myFunctionS);
@@ -100,6 +106,8 @@ function myFunctionA(){
     document.querySelector("#h23").innerHTML= africaGrow ;
 
     document.querySelector("#h24").innerHTML= africaMinus ;
+
+    document.querySelector(".chart").setAttribute('style', 'height:' + (Africa18/Total*100) + '%')
 }
 
 document.querySelector(".africa").addEventListener("click", myFunctionA);
@@ -115,6 +123,8 @@ function myFunctionAs(){
     document.querySelector("#h23").innerHTML= asiaGrow ;
 
     document.querySelector("#h24").innerHTML= asiaMinus ;
+
+    document.querySelector(".chart").setAttribute('style', 'height:' + (Asien18/Total*100) + '%')
 }
 
 document.querySelector(".asia").addEventListener("click", myFunctionAs);
@@ -130,6 +140,9 @@ function myFunctionAu(){
     document.querySelector("#h23").innerHTML= australiaGrow ;
 
     document.querySelector("#h24").innerHTML= australiaMinus ;
+
+    document.querySelector(".chart").setAttribute('style', 'height:' + (Australien18/Total*100) + '%')
 }
 
 document.querySelector(".australia").addEventListener("click", myFunctionAu);
+
