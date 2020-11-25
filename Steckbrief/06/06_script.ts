@@ -18,131 +18,58 @@
 
     console.log(Total)
 
-    var europeRel: string = Math.round(Europa18/Total*100)+ "%";
-    var australiaRel: string = Math.round(Australien18/Total*100) +"%";
-    var asiaRel: string = Math.round(Asien18/Total*100) + "%";
-    var southAmericaRel: string = Math.round(SüdAmerica18/Total*100) + "%";
-    var northAmericaRel: string = Math.round(NordAmerica18/Total*100) + "%";
-    var africaRel: string = Math.round(Africa18/Total*100) + "%";
+    var europeRel: number = Math.round(Europa18/Total*100);
+    var australiaRel: number = Math.round(Australien18/Total*100);
+    var asiaRel: number= Math.round(Asien18/Total*100);
+    var southAmericaRel: number = Math.round(SüdAmerica18/Total*100);
+    var northAmericaRel: number = Math.round(NordAmerica18/Total*100);
+    var africaRel: number = Math.round(Africa18/Total*100);
 
-    var europeGrow: string = Math.round(Europa18/Europa08*100) + "%";
-    var australiaGrow: string = Math.round(Australien18/Australien08*100) + "%";
-    var asiaGrow: string = Math.round(Asien18/Asien08*100) + "%";
-    var southAmericaGrow: string = Math.round(SüdAmerica18/SüdAmerica08*100) + "%";
-    var northAmericaGrow: string = Math.round(NordAmerica18/NordAmerica08*100) + "%";
-    var africaGrow: string = Math.round(Africa08/Africa18*100) + "%" ;
+    var europeGrow: number = Math.round(Europa18/Europa08*100);
+    var australiaGrow: number= Math.round(Australien18/Australien08*100);
+    var asiaGrow: number = Math.round(Asien18/Asien08*100);
+    var southAmericaGrow: number = Math.round(SüdAmerica18/SüdAmerica08*100);
+    var northAmericaGrow: number = Math.round(NordAmerica18/NordAmerica08*100);
+    var africaGrow: number = Math.round(Africa08/Africa18*100);
 
-    var europeMinus: string = Math.round(Europa18-Europa08) + " kg CO2";
-    var australiaMinus: string = Math.round(Australien18-Australien08) + " kg CO2";
-    var asiaMinus: string = Math.round(Asien18-Asien08) + " kg CO2";
-    var southAmericaMinus: string = Math.round(SüdAmerica18-SüdAmerica08) + " kg CO2";
-    var northAmericaMinus: string = Math.round(NordAmerica18-NordAmerica08) + " kg CO2";
-    var africaMinus: string = Math.round(Africa18-Africa08) + " kg CO2";
+    var europeMinus: number = Math.round(Europa18-Europa08);
+    var australiaMinus: number = Math.round(Australien18-Australien08);
+    var asiaMinus: number = Math.round(Asien18-Asien08);
+    var southAmericaMinus: number = Math.round(SüdAmerica18-SüdAmerica08);
+    var northAmericaMinus: number = Math.round(NordAmerica18-NordAmerica08);
+    var africaMinus: number = Math.round(Africa18-Africa08);
 
 
 
-function myFunctionE(){
-    document.querySelector("h1").innerHTML= "Carbon Dioxide Emissions in Europe";
+function myFunctionE(continent: string, 
+                     emissions18: number, 
+                     emissionsRel: number, 
+                     emissionsGrow: number, 
+                     emissionsMinus: number)
+                     {
 
-    document.querySelector("p").innerHTML= "Emission absolute of Europe in 2018";
-    document.querySelector("h2").innerHTML= Europa18 ;
+    document.querySelector("h1").innerHTML= "Carbon Dioxide Emissions in "+ continent;
 
-    document.querySelector("#h22").innerHTML= europeRel ;
+    document.querySelector("p").innerHTML= "Emission absolute of " + continent + " in 2018";
+    document.querySelector("h2").innerHTML= emissions18;
 
-    document.querySelector("#h23").innerHTML= europeGrow ;
+    document.querySelector("#h22").innerHTML= emissionsRel + "%";
 
-    document.querySelector("#h24").innerHTML= europeMinus ;
+    document.querySelector("#h23").innerHTML= emissionsGrow + "%";
 
-    document.querySelector(".chart").setAttribute('style', 'height:' + (Europa18/Total*100) + '%')
+    document.querySelector("#h24").innerHTML= emissionsMinus + "kg CO2";
+
+    document.querySelector(".chart").setAttribute('style', 'height:' + (emissions18/Total*100) + '%')
 }
 
-document.querySelector(".europe").addEventListener("click", myFunctionE);
+document.querySelector(".europe").addEventListener("click", myFunctionE.bind(null, "Europe", Europa18, europeRel, europeGrow, europeMinus));
 
+document.querySelector(".northamerica").addEventListener("click", myFunctionE.bind(null, "North America", NordAmerica18, northAmericaRel, northAmericaGrow, northAmericaMinus));
 
+document.querySelector(".southamerica").addEventListener("click", myFunctionE.bind(null, "South America", SüdAmerica18, southAmericaRel, southAmericaGrow, southAmericaMinus));
 
-function myFunctionN(){
-    document.querySelector("h1").innerHTML= "Carbon Dioxide Emissions in North America";
+document.querySelector(".africa").addEventListener("click", myFunctionE.bind(null, "Africa", Africa18, africaRel, africaGrow, africaMinus));
 
-    document.querySelector("p").innerHTML= "Emission absolute of North America in 2018";
-    document.querySelector("h2").innerHTML= NordAmerica18;
+document.querySelector(".asia").addEventListener("click", myFunctionE.bind(null, "Asia", Asien18, asiaRel, asiaGrow, asiaMinus));
 
-    document.querySelector("#h22").innerHTML= northAmericaRel ;
-
-    document.querySelector("#h23").innerHTML= northAmericaGrow ;
-
-    document.querySelector("#h24").innerHTML= northAmericaMinus ;
-
-    document.querySelector(".chart").setAttribute('style', 'height:' + (NordAmerica18/Total*100) + '%')
-}
-
-document.querySelector(".northamerica").addEventListener("click", myFunctionN);
-
-
-function myFunctionS(){
-    document.querySelector("h1").innerHTML= "Carbon Dioxide Emissions in South America";
-
-    document.querySelector("p").innerHTML= "Emission absolute of South America in 2018";
-    document.querySelector("h2").innerHTML= SüdAmerica18 ;
-
-    document.querySelector("#h22").innerHTML= southAmericaRel ;
-
-    document.querySelector("#h23").innerHTML= southAmericaGrow ;
-
-    document.querySelector("#h24").innerHTML= southAmericaMinus ;
-
-    document.querySelector(".chart").setAttribute('style', 'height:' + (SüdAmerica18/Total*100) + '%')
-}
-
-document.querySelector(".southamerica").addEventListener("click", myFunctionS);
-
-function myFunctionA(){
-    document.querySelector("h1").innerHTML= "Carbon Dioxide Emissions in Africa";
-
-    document.querySelector("p").innerHTML= "Emission absolute of Africa in 2018";
-    document.querySelector("h2").innerHTML= Africa18 ;
-
-    document.querySelector("#h22").innerHTML= africaRel ;
-
-    document.querySelector("#h23").innerHTML= africaGrow ;
-
-    document.querySelector("#h24").innerHTML= africaMinus ;
-
-    document.querySelector(".chart").setAttribute('style', 'height:' + (Africa18/Total*100) + '%')
-}
-
-document.querySelector(".africa").addEventListener("click", myFunctionA);
-
-function myFunctionAs(){
-    document.querySelector("h1").innerHTML= "Carbon Dioxide Emissions in Asia";
-
-    document.querySelector("p").innerHTML= "Emission absolute of Asia in 2018";
-    document.querySelector("h2").innerHTML= Asien18 ;
-
-    document.querySelector("#h22").innerHTML= asiaRel ;
-
-    document.querySelector("#h23").innerHTML= asiaGrow ;
-
-    document.querySelector("#h24").innerHTML= asiaMinus ;
-
-    document.querySelector(".chart").setAttribute('style', 'height:' + (Asien18/Total*100) + '%')
-}
-
-document.querySelector(".asia").addEventListener("click", myFunctionAs);
-
-function myFunctionAu(){
-    document.querySelector("h1").innerHTML= "Carbon Dioxide Emissions in Australia";
-
-    document.querySelector("p").innerHTML= "Emission absolute of Australia in 2018";
-    document.querySelector("h2").innerHTML= Australien18 ;
-
-    document.querySelector("#h22").innerHTML= australiaRel ;
-
-    document.querySelector("#h23").innerHTML= australiaGrow ;
-
-    document.querySelector("#h24").innerHTML= australiaMinus ;
-
-    document.querySelector(".chart").setAttribute('style', 'height:' + (Australien18/Total*100) + '%')
-}
-
-document.querySelector(".australia").addEventListener("click", myFunctionAu);
-
+document.querySelector(".australia").addEventListener("click", myFunctionE.bind(null, "Australia", Australien18, australiaRel, australiaGrow, australiaMinus));
