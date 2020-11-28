@@ -1,0 +1,113 @@
+*{
+    background-color: #6F925A;
+}
+
+.DrumPadFlexbox{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 480px;
+    height: 470px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #6F925A;
+}
+
+.FlexButton1{
+    margin: 3px;
+    width: 150px;
+    height: 150px;
+    position: relative;
+    background-color: #ABDEE6;
+    border-radius: 10px;
+}
+
+.FlexButton2{
+    margin: 3px;
+    width: 150px;
+    height: 150px;
+    position: relative;
+    background-color:#ABDEE6;
+    border-radius: 10px;
+}
+
+.FlexButton3{
+    margin: 3px;
+    width: 150px;
+    height: 150px;
+    position: relative;
+    background-color:#ABDEE6;
+    border-radius: 10px;
+}
+
+.FlexButton4{
+    margin: 3px;
+    width: 150px;
+    height: 150px;
+    position: relative;
+    background-color: #F3B0C3;
+    border-radius: 10px;
+}
+
+.FlexButton5{
+    margin: 3px;
+    width: 150px;
+    height: 150px;
+    position: relative;
+    background-color:#F3B0C3;
+    border-radius: 10px;
+}
+
+.FlexButton6{
+    margin: 3px;
+    width: 150px;
+    height: 150px;
+    position: relative;
+    background-color:#F3B0C3;
+    border-radius: 10px;
+}
+
+.FlexButton7{
+    margin: 3px;
+    width: 150px;
+    height: 150px;
+    position: relative;
+    background-color:#F3B0C3;
+    border-radius: 10px;
+}
+
+.FlexButton8{
+    margin: 3px;
+    width: 150px;
+    height: 150px;
+    position: relative;
+    background-color: #CBAACB;
+    border-radius: 10px;
+}
+
+.FlexButton9{
+    margin: 3px;
+    width: 150px;
+    height: 150px;
+    position: relative;
+    background-color: #CBAACB;
+    border-radius: 10px;
+}
+
+.FlexPlayButton{
+    text-align: center;
+    margin: 3px;
+    width: 300px;
+    height: 150px;
+    position: relative;
+    background-color: #6F925A;
+    border-radius: 10px;
+}
+
+p{
+    color: rebeccapurple;
+}
