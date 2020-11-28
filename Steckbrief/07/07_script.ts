@@ -37,3 +37,18 @@ document.querySelector(".FlexButton7").addEventListener("click", myFunction.bind
 document.querySelector(".FlexButton8").addEventListener("click", myFunction.bind(null, ButtonPlay8));
 
 document.querySelector(".FlexButton9").addEventListener("click", myFunction.bind(null, ButtonPlay9));
+
+var Beat : HTMLAudioElement[] = [ButtonPlay1, ButtonPlay2,ButtonPlay3];
+
+var index = 0;
+
+function BeatInterval() {
+    Beat[index].play();
+    index=index+1
+}
+
+function IntervallFunction() {
+    setInterval(BeatInterval, 500)
+}
+
+document.querySelector(".FlexPlayButton").addEventListener("click", IntervallFunction);
