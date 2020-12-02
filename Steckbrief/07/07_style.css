@@ -38,6 +38,15 @@ h2{
     border-radius: 10px;
 }
 
+
+.FlexButton1:hover{
+    background-color:#c4f7ff;
+}
+
+.FlexButton1:active{
+    background-color: #8fb9bf;
+}
+
 .FlexButton2{
     margin: 3px;
     width: 150px;
@@ -45,6 +54,14 @@ h2{
     position: relative;
     background-color:#ABDEE6;
     border-radius: 10px;
+}
+
+.FlexButton2:hover{
+    background-color:#c4f7ff;
+}
+
+.FlexButton2:active{
+    background-color: #8fb9bf;
 }
 
 .FlexButton3{
@@ -56,6 +73,14 @@ h2{
     border-radius: 10px;
 }
 
+.FlexButton3:hover{
+    background-color:#c4f7ff;
+}
+
+.FlexButton3:active{
+    background-color: #8fb9bf;
+}
+
 .FlexButton4{
     margin: 3px;
     width: 150px;
@@ -63,6 +88,14 @@ h2{
     position: relative;
     background-color: #F3B0C3;
     border-radius: 10px;
+}
+
+.FlexButton4:hover{
+    background-color:#ffccda;
+}
+
+.FlexButton4:active{
+    background-color: #d49bab;
 }
 
 .FlexButton5{
@@ -74,6 +107,14 @@ h2{
     border-radius: 10px;
 }
 
+.FlexButton5:hover{
+    background-color:#ffccda;
+}
+
+.FlexButton5:active{
+    background-color: #d49bab;
+}
+
 .FlexButton6{
     margin: 3px;
     width: 150px;
@@ -81,6 +122,14 @@ h2{
     position: relative;
     background-color:#F3B0C3;
     border-radius: 10px;
+}
+
+.FlexButton6:hover{
+    background-color:#ffccda;
+}
+
+.FlexButton6:active{
+    background-color: #d49bab;
 }
 
 .FlexButton7{
@@ -92,13 +141,29 @@ h2{
     border-radius: 10px;
 }
 
+.FlexButton7:hover{
+    background-color:#ffccda;
+}
+
+.FlexButton7:active{
+    background-color: #d49bab;
+}
+
 .FlexButton8{
     margin: 3px;
     width: 150px;
     height: 150px;
     position: relative;
-    background-color: #CBAACB;
+    background-color: #d1badb;
     border-radius: 10px;
+}
+
+.FlexButton8:hover{
+    background-color:#ead0f5;
+}
+
+.FlexButton8:active{
+    background-color: #b6a1bf;
 }
 
 .FlexButton9{
@@ -106,9 +171,18 @@ h2{
     width: 150px;
     height: 150px;
     position: relative;
-    background-color: #CBAACB;
+    background-color: #d1badb;
     border-radius: 10px;
 }
+
+.FlexButton9:hover{
+    background-color:#ead0f5;
+}
+
+.FlexButton9:active{
+    background-color: #b6a1bf;
+}
+
 
 .FlexPlayButton{
     text-align: center;
