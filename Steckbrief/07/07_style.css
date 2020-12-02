@@ -1,3 +1,4 @@
+
 body{
     background-image: url("assets/bg.png");
 }
@@ -33,17 +34,17 @@ h1{
     width: 150px;
     height: 150px;
     position: relative;
-    background-color: #445e34;
+    background: linear-gradient(to top, #445e34, #6e8f5b);
     border-radius: 10px;
 }
 
 
 .FlexButton1:hover{
-    background-color:#597549;
+    background: linear-gradient(to top, #6e8f5b, #445e34);
 }
 
 .FlexButton1:active{
-    background-color: #2e4222;
+    background: linear-gradient(to top, #6e8f5b, #213018);
 }
 
 .FlexButton2{
@@ -51,16 +52,16 @@ h1{
     width: 150px;
     height: 150px;
     position: relative;
-    background-color:#445e34;
+    background: linear-gradient(to top, #445e34, #6e8f5b);
     border-radius: 10px;
 }
 
 .FlexButton2:hover{
-    background-color:#597549;
+    background: linear-gradient(to top, #6e8f5b, #445e34);
 }
 
 .FlexButton2:active{
-    background-color: #2e4222;
+    background: linear-gradient(to top, #6e8f5b, #213018);
 }
 
 .FlexButton3{
@@ -68,16 +69,16 @@ h1{
     width: 150px;
     height: 150px;
     position: relative;
-    background-color:#445e34;
+    background: linear-gradient(to top, #445e34, #6e8f5b);
     border-radius: 10px;
 }
 
 .FlexButton3:hover{
-    background-color:#597549;
+    background: linear-gradient(to top, #6e8f5b, #445e34);
 }
 
 .FlexButton3:active{
-    background-color: #2e4222;
+    background: linear-gradient(to top, #6e8f5b, #213018);
 }
 
 .FlexButton4{
@@ -85,16 +86,16 @@ h1{
     width: 150px;
     height: 150px;
     position: relative;
-    background-color: #7b942b;
+    background: linear-gradient(to top, #52631a, #7b942b);
     border-radius: 10px;
 }
 
 .FlexButton4:hover{
-    background-color:#92ad39;
+    background: linear-gradient(to top, #7b942b, #52631a);
 }
 
 .FlexButton4:active{
-    background-color: #5f7320;
+    background: linear-gradient(to top, #7b942b, #3d4a12);
 }
 
 .FlexButton5{
@@ -102,16 +103,16 @@ h1{
     width: 150px;
     height: 150px;
     position: relative;
-    background-color:#7b942b;
+    background: linear-gradient(to top, #52631a, #7b942b);
     border-radius: 10px;
 }
 
 .FlexButton5:hover{
-    background-color:#92ad39;
+    background: linear-gradient(to top, #7b942b, #52631a);
 }
 
 .FlexButton5:active{
-    background-color: #5f7320;
+    background: linear-gradient(to top, #7b942b, #3d4a12);
 }
 
 .FlexButton6{
@@ -119,16 +120,16 @@ h1{
     width: 150px;
     height: 150px;
     position: relative;
-    background-color:#7b942b;
+    background: linear-gradient(to top, #52631a, #7b942b);
     border-radius: 10px;
 }
 
 .FlexButton6:hover{
-    background-color:#92ad39;
+    background: linear-gradient(to top, #7b942b, #52631a);
 }
 
 .FlexButton6:active{
-    background-color: #5f7320;
+    background: linear-gradient(to top, #7b942b, #3d4a12);
 }
 
 .FlexButton7{
@@ -136,16 +137,16 @@ h1{
     width: 150px;
     height: 150px;
     position: relative;
-    background-color:#7b942b;
+    background: linear-gradient(to top, #52631a, #7b942b);
     border-radius: 10px;
 }
 
 .FlexButton7:hover{
-    background-color:#92ad39;
+    background: linear-gradient(to top, #7b942b, #52631a);
 }
 
 .FlexButton7:active{
-    background-color: #5f7320;
+    background: linear-gradient(to top, #7b942b, #3d4a12);
 }
 
 .FlexButton8{
@@ -153,16 +154,16 @@ h1{
     width: 150px;
     height: 150px;
     position: relative;
-    background-color: #0e7829;
+    background: linear-gradient(to top, #084d19, #0e7829);
     border-radius: 10px;
 }
 
 .FlexButton8:hover{
-    background-color:#159435;
+    background: linear-gradient(to top, #0e7829, #084d19);
 }
 
 .FlexButton8:active{
-    background-color: #095c1e;
+    background: linear-gradient(to top, #0e7829, #053b12);
 }
 
 .FlexButton9{
@@ -170,16 +171,16 @@ h1{
     width: 150px;
     height: 150px;
     position: relative;
-    background-color: #0e7829;
+    background: linear-gradient(to top, #084d19, #0e7829);
     border-radius: 10px;
 }
 
 .FlexButton9:hover{
-    background-color:#159435;
+    background: linear-gradient(to top, #0e7829, #084d19);
 }
 
 .FlexButton9:active{
-    background-color: #095c1e;
+    background: linear-gradient(to top, #0e7829, #053b12);
 }
 
 
