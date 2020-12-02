@@ -2,6 +2,18 @@
     background-color: #6F925A;
 }
 
+h1{
+    font-size: larger;
+    font-family: fantasy;
+    text-align: center;
+}
+
+h2{
+    font-size:medium;
+    font-family: fantasy;
+    text-align: center;
+}
+
 .DrumPadFlexbox{
     display: flex;
     flex-direction: row;
