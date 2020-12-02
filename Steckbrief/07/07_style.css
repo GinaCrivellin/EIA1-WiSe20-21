@@ -1,18 +1,15 @@
-*{
-    background-color: #6F925A;
+body{
+    background-image: url("assets/bg.png");
 }
 
 h1{
-    font-size: larger;
+    font-size: 23px;
     font-family: fantasy;
     text-align: center;
+    font-weight: 1500;
+    color: rgb(136, 12, 12);
 }
 
-h2{
-    font-size:medium;
-    font-family: fantasy;
-    text-align: center;
-}
 
 .DrumPadFlexbox{
     display: flex;
@@ -26,7 +23,9 @@ h2{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: #6F925A;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgb(136, 12, 12);
 }
 
 .FlexButton1{
@@ -34,17 +33,17 @@ h2{
     width: 150px;
     height: 150px;
     position: relative;
-    background-color: #ABDEE6;
+    background-color: #445e34;
     border-radius: 10px;
 }
 
 
 .FlexButton1:hover{
-    background-color:#c4f7ff;
+    background-color:#597549;
 }
 
 .FlexButton1:active{
-    background-color: #8fb9bf;
+    background-color: #2e4222;
 }
 
 .FlexButton2{
@@ -52,16 +51,16 @@ h2{
     width: 150px;
     height: 150px;
     position: relative;
-    background-color:#ABDEE6;
+    background-color:#445e34;
     border-radius: 10px;
 }
 
 .FlexButton2:hover{
-    background-color:#c4f7ff;
+    background-color:#597549;
 }
 
 .FlexButton2:active{
-    background-color: #8fb9bf;
+    background-color: #2e4222;
 }
 
 .FlexButton3{
@@ -69,16 +68,16 @@ h2{
     width: 150px;
     height: 150px;
     position: relative;
-    background-color:#ABDEE6;
+    background-color:#445e34;
     border-radius: 10px;
 }
 
 .FlexButton3:hover{
-    background-color:#c4f7ff;
+    background-color:#597549;
 }
 
 .FlexButton3:active{
-    background-color: #8fb9bf;
+    background-color: #2e4222;
 }
 
 .FlexButton4{
@@ -86,16 +85,16 @@ h2{
     width: 150px;
     height: 150px;
     position: relative;
-    background-color: #F3B0C3;
+    background-color: #7b942b;
     border-radius: 10px;
 }
 
 .FlexButton4:hover{
-    background-color:#ffccda;
+    background-color:#92ad39;
 }
 
 .FlexButton4:active{
-    background-color: #d49bab;
+    background-color: #5f7320;
 }
 
 .FlexButton5{
@@ -103,16 +102,16 @@ h2{
     width: 150px;
     height: 150px;
     position: relative;
-    background-color:#F3B0C3;
+    background-color:#7b942b;
     border-radius: 10px;
 }
 
 .FlexButton5:hover{
-    background-color:#ffccda;
+    background-color:#92ad39;
 }
 
 .FlexButton5:active{
-    background-color: #d49bab;
+    background-color: #5f7320;
 }
 
 .FlexButton6{
@@ -120,16 +119,16 @@ h2{
     width: 150px;
     height: 150px;
     position: relative;
-    background-color:#F3B0C3;
+    background-color:#7b942b;
     border-radius: 10px;
 }
 
 .FlexButton6:hover{
-    background-color:#ffccda;
+    background-color:#92ad39;
 }
 
 .FlexButton6:active{
-    background-color: #d49bab;
+    background-color: #5f7320;
 }
 
 .FlexButton7{
@@ -137,16 +136,16 @@ h2{
     width: 150px;
     height: 150px;
     position: relative;
-    background-color:#F3B0C3;
+    background-color:#7b942b;
     border-radius: 10px;
 }
 
 .FlexButton7:hover{
-    background-color:#ffccda;
+    background-color:#92ad39;
 }
 
 .FlexButton7:active{
-    background-color: #d49bab;
+    background-color: #5f7320;
 }
 
 .FlexButton8{
@@ -154,16 +153,16 @@ h2{
     width: 150px;
     height: 150px;
     position: relative;
-    background-color: #d1badb;
+    background-color: #0e7829;
     border-radius: 10px;
 }
 
 .FlexButton8:hover{
-    background-color:#ead0f5;
+    background-color:#159435;
 }
 
 .FlexButton8:active{
-    background-color: #b6a1bf;
+    background-color: #095c1e;
 }
 
 .FlexButton9{
@@ -171,16 +170,16 @@ h2{
     width: 150px;
     height: 150px;
     position: relative;
-    background-color: #d1badb;
+    background-color: #0e7829;
     border-radius: 10px;
 }
 
 .FlexButton9:hover{
-    background-color:#ead0f5;
+    background-color:#159435;
 }
 
 .FlexButton9:active{
-    background-color: #b6a1bf;
+    background-color: #095c1e;
 }
 
 
@@ -190,10 +189,21 @@ h2{
     width: 300px;
     height: 150px;
     position: relative;
-    background-color: #6F925A;
     border-radius: 10px;
 }
 
 p{
     color: rebeccapurple;
+}
+
+.Penguin{
+    position: relative;
+    left: -320px;
+    top: -450px;
+}
+
+.Bow{
+    position: relative;
+    left: -138px;
+    top: -250px;
 }
