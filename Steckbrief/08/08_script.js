@@ -44,19 +44,30 @@ indexWhile++;
 
 }
 */
-var indexWhile = 0;
-while (indexWhile < 5) {
-    var Beat = [ButtonPlay1, ButtonPlay2, ButtonPlay3];
-    document.querySelector(".FlexPlayButton").addEventListener("click", function () {
-        setInterval(function () {
-            playSample(Beat[0]);
-            playSample(Beat[1]);
-            playSample(Beat[2]);
-        }, 600);
-    });
-    function playSample(adio) {
-        adio.play();
-    }
-    indexWhile++;
+// Hier werden die Funktionen "definiert":
+function foo() {
+    console.log("Hello :)");
 }
+var bar = function () {
+    console.log("Hello :)");
+};
+var baz = function () {
+    console.log("Hello :)");
+};
+// Jetzt werden die Funktionen "aufgerufen" oder "ausgeführt":
+foo();
+bar();
+baz();
+var index = 0;
+//while (indexWhile < 5){
+var Beat = [ButtonPlay1, ButtonPlay2, ButtonPlay3];
+document.querySelector(".FlexPlayButton").addEventListener("click", function () {
+    setInterval(function () {
+        if (index <= 2) {
+            Beat[index].play();
+            index++;
+        }
+    }, 600);
+});
+//}
 //# sourceMappingURL=08_script.js.map

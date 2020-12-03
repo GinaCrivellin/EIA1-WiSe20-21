@@ -64,25 +64,43 @@ indexWhile++;
 }
 */
 
-var indexWhile = 0;
 
-while (indexWhile < 5){
+// Hier werden die Funktionen "definiert":
+function foo() {
+    console.log("Hello :)");
+}
+
+var bar = function() {
+    console.log("Hello :)");
+};
+
+var baz = () => {
+    console.log("Hello :)");
+};
+
+// Jetzt werden die Funktionen "aufgerufen" oder "ausgeführt":
+foo();
+bar();
+baz();
+
+
+
+
+var index = 0;
+
+//while (indexWhile < 5){
 
 
     var Beat : HTMLAudioElement[] = [ButtonPlay1, ButtonPlay2,ButtonPlay3];
 
     document.querySelector(".FlexPlayButton").addEventListener("click", () => {
-        setInterval(()=>{
-            playSample((Beat[0] as HTMLAudioElement))
-            playSample((Beat[1] as HTMLAudioElement))
-            playSample((Beat[2] as HTMLAudioElement))
+        setInterval(() => {
+            if (index <= 2) {
+                Beat[index].play();
+                index++;
+            }
         },600);
+            
     })
 
-    function playSample(adio: HTMLAudioElement){
-        adio.play();
-    }
-
-indexWhile++;
-
-}
+//}

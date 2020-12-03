@@ -42,13 +42,13 @@ var Beat : HTMLAudioElement[] = [ButtonPlay1, ButtonPlay2,ButtonPlay3];
 
 var index = 0;
 
-function BeatInterval() {
-    Beat[index].play();
-    index=index+1
-}
+var Beat : HTMLAudioElement[] = [ButtonPlay1, ButtonPlay2,ButtonPlay3];
 
-function IntervallFunction() {
-    setInterval(BeatInterval, 500)
-}
-
-document.querySelector(".FlexPlayButton").addEventListener("click", IntervallFunction);
+document.querySelector(".FlexPlayButton").addEventListener("click", () => {
+    setInterval(() => {
+        if (index <= 2) {
+            Beat[index].play();
+            index++;
+        }
+    },600);
+});
