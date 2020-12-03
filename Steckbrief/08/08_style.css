@@ -1,8 +1,6 @@
 
 body{
-    background-image: url("assets/bg2.jpg");
-    height: 100%;
-    width: 100%;
+    background-image: url("assets/bg.png");
 }
 
 h1{
@@ -10,7 +8,7 @@ h1{
     font-family: fantasy;
     text-align: center;
     font-weight: 1500;
-    color: rgb(136, 12, 12)
+    color: rgb(136, 12, 12);
 }
 
 
