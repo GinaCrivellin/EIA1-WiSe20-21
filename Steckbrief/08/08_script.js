@@ -19,18 +19,44 @@ document.querySelector(".FlexButton6").addEventListener("click", myFunction.bind
 document.querySelector(".FlexButton7").addEventListener("click", myFunction.bind(null, ButtonPlay7));
 document.querySelector(".FlexButton8").addEventListener("click", myFunction.bind(null, ButtonPlay8));
 document.querySelector(".FlexButton9").addEventListener("click", myFunction.bind(null, ButtonPlay9));
+/*
 var indexWhile = 0;
-while (indexWhile < 5) {
-    var Beat = [ButtonPlay1, ButtonPlay2, ButtonPlay3];
+
+while (indexWhile < 5){
+
+
+    var Beat : HTMLAudioElement[] = [ButtonPlay1, ButtonPlay2,ButtonPlay3];
+
     var index = 0;
-    function BeatInterval() {
+
+    function BeatInterval() : void {
         Beat[index].play();
-        index = index + 1;
+        index=index+1;
     }
+
     function IntervallFunction() {
         setInterval(BeatInterval, 500);
     }
+
     document.querySelector(".FlexPlayButton").addEventListener("click", IntervallFunction);
+
+indexWhile++;
+
+}
+*/
+var indexWhile = 0;
+while (indexWhile < 5) {
+    var Beat = [ButtonPlay1, ButtonPlay2, ButtonPlay3];
+    document.querySelector(".FlexPlayButton").addEventListener("click", function () {
+        setInterval(function () {
+            playSample(Beat[0]);
+            playSample(Beat[1]);
+            playSample(Beat[2]);
+        }, 600);
+    });
+    function playSample(adio) {
+        adio.play();
+    }
     indexWhile++;
 }
 //# sourceMappingURL=08_script.js.map

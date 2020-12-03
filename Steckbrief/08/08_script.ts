@@ -38,6 +38,7 @@ document.querySelector(".FlexButton8").addEventListener("click", myFunction.bind
 
 document.querySelector(".FlexButton9").addEventListener("click", myFunction.bind(null, ButtonPlay9));
 
+/*
 var indexWhile = 0;
 
 while (indexWhile < 5){
@@ -57,6 +58,30 @@ while (indexWhile < 5){
     }
 
     document.querySelector(".FlexPlayButton").addEventListener("click", IntervallFunction);
+
+indexWhile++;
+
+}
+*/
+
+var indexWhile = 0;
+
+while (indexWhile < 5){
+
+
+    var Beat : HTMLAudioElement[] = [ButtonPlay1, ButtonPlay2,ButtonPlay3];
+
+    document.querySelector(".FlexPlayButton").addEventListener("click", () => {
+        setInterval(()=>{
+            playSample((Beat[0] as HTMLAudioElement))
+            playSample((Beat[1] as HTMLAudioElement))
+            playSample((Beat[2] as HTMLAudioElement))
+        },600);
+    })
+
+    function playSample(adio: HTMLAudioElement){
+        adio.play();
+    }
 
 indexWhile++;
 
