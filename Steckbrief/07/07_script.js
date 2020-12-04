@@ -21,12 +21,14 @@ document.querySelector(".FlexButton8").addEventListener("click", myFunction.bind
 document.querySelector(".FlexButton9").addEventListener("click", myFunction.bind(null, ButtonPlay9));
 var Beat = [ButtonPlay1, ButtonPlay2, ButtonPlay3];
 var index = 0;
-function BeatInterval() {
-    Beat[index].play();
-    index = index + 1;
-}
-function IntervallFunction() {
-    setInterval(BeatInterval, 500);
-}
-document.querySelector(".FlexPlayButton").addEventListener("click", IntervallFunction);
+var Beat = [ButtonPlay1, ButtonPlay2, ButtonPlay3];
+document.querySelector(".FlexPlayButton").addEventListener("click", function () {
+    setInterval(function () {
+        console.log(index);
+        if (index <= 2) {
+            Beat[index].play();
+            index++;
+        }
+    }, 600);
+});
 //# sourceMappingURL=07_script.js.map

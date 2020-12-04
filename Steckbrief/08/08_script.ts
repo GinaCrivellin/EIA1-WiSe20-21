@@ -84,23 +84,24 @@ bar();
 baz();
 
 
-
-
 var index = 0;
 
-//while (indexWhile < 5){
+var Beat : HTMLAudioElement[] = [ButtonPlay1, ButtonPlay2,ButtonPlay3];
 
+document.querySelector(".FlexPlayButton").addEventListener("click", () => {
+    setInterval(() => {
+        if (index <= 2) {
+            Beat[index].play();
+            index++;
+        }
+        else {
+            index = 0;
+            Beat[index].play(); 
+            index++;
+        }
+    }, 600);
+})
 
-    var Beat : HTMLAudioElement[] = [ButtonPlay1, ButtonPlay2,ButtonPlay3];
-
-    document.querySelector(".FlexPlayButton").addEventListener("click", () => {
-        setInterval(() => {
-            if (index <= 2) {
-                Beat[index].play();
-                index++;
-            }
-        },600);
-            
-    })
-
-//}
+document.querySelector(".FlexPlayButton").addEventListener("click", () => {
+    clearInterval();
+})

@@ -46,6 +46,7 @@ var Beat : HTMLAudioElement[] = [ButtonPlay1, ButtonPlay2,ButtonPlay3];
 
 document.querySelector(".FlexPlayButton").addEventListener("click", () => {
     setInterval(() => {
+        console.log(index);
         if (index <= 2) {
             Beat[index].play();
             index++;
