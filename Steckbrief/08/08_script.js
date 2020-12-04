@@ -59,10 +59,12 @@ foo();
 bar();
 baz();
 var index = 0;
-var myInterval = setInterval;
+var myInterval;
+var switchPlay = document.querySelector('.FlexPlayButton');
+var switchPause = document.querySelector('.FlexPauseButton');
 var Beat = [ButtonPlay1, ButtonPlay2, ButtonPlay3];
 document.querySelector(".FlexPlayButton").addEventListener("click", function () {
-    setInterval(function () {
+    myInterval = setInterval(function () {
         if (index <= 2) {
             Beat[index].play();
             index++;
@@ -73,8 +75,26 @@ document.querySelector(".FlexPlayButton").addEventListener("click", function () 
             index++;
         }
     }, 600);
+    if (switchPlay.classList.contains('inactive')) {
+        switchPlay.classList.remove('inactive');
+        switchPause.classList.add('innactive');
+        clearInterval(myInterval);
+    }
+    else {
+        switchPlay.classList.add('inactive');
+        switchPause.classList.remove('inactive');
+    }
 });
-document.querySelector(".FlexPlayButton").addEventListener("click", function () {
-    clearInterval(myInterval);
+document.querySelector(".FlexPauseButton").addEventListener("click", function () {
+    if (switchPlay.classList.contains('inactive')) {
+        switchPlay.classList.remove('inactive');
+        switchPause.classList.add('inactive');
+        clearInterval(myInterval);
+    }
+    else {
+        switchPlay.classList.add('inactive');
+        switchPause.classList.add('inactive');
+    }
 });
+console.log(switchPlay.getAttribute('class'));
 //# sourceMappingURL=08_script.js.map

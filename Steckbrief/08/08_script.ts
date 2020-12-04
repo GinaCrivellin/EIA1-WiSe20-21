@@ -86,12 +86,15 @@ baz();
 
 var index = 0;
 
-var myInterval = setInterval
+var myInterval
+
+var switchPlay:HTMLElement = document.querySelector('.FlexPlayButton');
+var switchPause:HTMLElement = document.querySelector('.FlexPauseButton');
 
 var Beat : HTMLAudioElement[] = [ButtonPlay1, ButtonPlay2,ButtonPlay3];
 
 document.querySelector(".FlexPlayButton").addEventListener("click", () => {
-    setInterval(() => {
+    myInterval = setInterval(() => {
         if (index <= 2) {
             Beat[index].play();
             index++;
@@ -102,8 +105,40 @@ document.querySelector(".FlexPlayButton").addEventListener("click", () => {
             index++;
         }
     }, 600);
+
+        if (switchPlay.classList.contains('inactive')){
+            switchPlay.classList.remove('inactive');
+            switchPause.classList.add('innactive');
+            clearInterval(myInterval);
+
+
+        }
+        
+        else {
+            switchPlay.classList.add('inactive');
+            switchPause.classList.remove('inactive');
+        }
+
+        
 })
 
-document.querySelector(".FlexPlayButton").addEventListener("click", () => {
-    clearInterval(myInterval);
+document.querySelector(".FlexPauseButton").addEventListener("click", () => {
+
+        if (switchPlay.classList.contains('inactive')){
+            switchPlay.classList.remove('inactive');
+            switchPause.classList.add('inactive');
+            clearInterval(myInterval);
+
+
+        }
+        
+        else {
+            switchPlay.classList.add('inactive');
+            switchPause.classList.add('inactive');
+        }
+
+        
 })
+
+
+console.log(switchPlay.getAttribute('class'));

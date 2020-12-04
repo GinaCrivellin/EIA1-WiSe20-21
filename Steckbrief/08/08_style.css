@@ -190,7 +190,17 @@ h1{
     width: 300px;
     height: 150px;
     position: relative;
-    border-radius: 10px;
+}
+
+.FlexPauseButton{
+    text-align: center;
+    margin: 30px;
+    position: relative;
+    color: white;
+}
+
+.inactive{
+    display:none;
 }
 
 p{

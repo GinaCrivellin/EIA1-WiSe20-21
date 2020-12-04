@@ -19,12 +19,10 @@ document.querySelector(".FlexButton6").addEventListener("click", myFunction.bind
 document.querySelector(".FlexButton7").addEventListener("click", myFunction.bind(null, ButtonPlay7));
 document.querySelector(".FlexButton8").addEventListener("click", myFunction.bind(null, ButtonPlay8));
 document.querySelector(".FlexButton9").addEventListener("click", myFunction.bind(null, ButtonPlay9));
-var Beat = [ButtonPlay1, ButtonPlay2, ButtonPlay3];
 var index = 0;
 var Beat = [ButtonPlay1, ButtonPlay2, ButtonPlay3];
 document.querySelector(".FlexPlayButton").addEventListener("click", function () {
     setInterval(function () {
-        console.log(index);
         if (index <= 2) {
             Beat[index].play();
             index++;

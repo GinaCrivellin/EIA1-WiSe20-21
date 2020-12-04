@@ -38,18 +38,18 @@ document.querySelector(".FlexButton8").addEventListener("click", myFunction.bind
 
 document.querySelector(".FlexButton9").addEventListener("click", myFunction.bind(null, ButtonPlay9));
 
-var Beat : HTMLAudioElement[] = [ButtonPlay1, ButtonPlay2,ButtonPlay3];
-
+/*
 var index = 0;
+*/
 
 var Beat : HTMLAudioElement[] = [ButtonPlay1, ButtonPlay2,ButtonPlay3];
 
 document.querySelector(".FlexPlayButton").addEventListener("click", () => {
     setInterval(() => {
-        console.log(index);
         if (index <= 2) {
             Beat[index].play();
             index++;
         }
     },600);
+
 });
