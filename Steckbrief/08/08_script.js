@@ -59,6 +59,7 @@ foo();
 bar();
 baz();
 var index = 0;
+var myInterval = setInterval;
 var Beat = [ButtonPlay1, ButtonPlay2, ButtonPlay3];
 document.querySelector(".FlexPlayButton").addEventListener("click", function () {
     setInterval(function () {
@@ -74,6 +75,6 @@ document.querySelector(".FlexPlayButton").addEventListener("click", function () 
     }, 600);
 });
 document.querySelector(".FlexPlayButton").addEventListener("click", function () {
-    clearInterval();
+    clearInterval(myInterval);
 });
 //# sourceMappingURL=08_script.js.map

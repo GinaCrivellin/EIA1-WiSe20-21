@@ -86,6 +86,8 @@ baz();
 
 var index = 0;
 
+var myInterval = setInterval
+
 var Beat : HTMLAudioElement[] = [ButtonPlay1, ButtonPlay2,ButtonPlay3];
 
 document.querySelector(".FlexPlayButton").addEventListener("click", () => {
@@ -103,5 +105,5 @@ document.querySelector(".FlexPlayButton").addEventListener("click", () => {
 })
 
 document.querySelector(".FlexPlayButton").addEventListener("click", () => {
-    clearInterval();
+    clearInterval(myInterval);
 })
