@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Drumpad</title>
     <link rel="stylesheet" href="08_style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <script src="08_script.js" defer></script>
 </head>
 <body>
@@ -50,20 +51,39 @@
 
         </div>
 
-        <div class="FlexPlayButton">
+        <nav>
 
-            <img src="images/play-button.png">
+            <div class="FlexPlayButton">
 
-        </div>
+                <i class="fas fa-play"></i>
 
-        <div class="FlexPauseButton inactive">
+            </div>
 
-            <img src="images/pause-button.png" width="290px" height="150px" top="50%">
+            <div class="FlexPauseButton inactive">
 
-        </div>
+                <i class="fas fa-pause"></i>
+
+            </div>
+
+            <div>
+
+                <i id="MikroButton" class="fas fa-microphone-alt" style="font-size: 100px"></i>
+        
+            </div>
+        
+            <div>
+        
+                <i id="DeleteButton" class="fas fa-trash-alt" style="font-size: 100px"></i>
+        
+            </div>
+
+        </nav>
 
 
     </div>
+
+
+    
 
 </body>
 

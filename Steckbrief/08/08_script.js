@@ -19,82 +19,62 @@ document.querySelector(".FlexButton6").addEventListener("click", myFunction.bind
 document.querySelector(".FlexButton7").addEventListener("click", myFunction.bind(null, ButtonPlay7));
 document.querySelector(".FlexButton8").addEventListener("click", myFunction.bind(null, ButtonPlay8));
 document.querySelector(".FlexButton9").addEventListener("click", myFunction.bind(null, ButtonPlay9));
-/*
-var indexWhile = 0;
-
-while (indexWhile < 5){
-
-
-    var Beat : HTMLAudioElement[] = [ButtonPlay1, ButtonPlay2,ButtonPlay3];
-
-    var index = 0;
-
-    function BeatInterval() : void {
-        Beat[index].play();
-        index=index+1;
-    }
-
-    function IntervallFunction() {
-        setInterval(BeatInterval, 500);
-    }
-
-    document.querySelector(".FlexPlayButton").addEventListener("click", IntervallFunction);
-
-indexWhile++;
-
+var isRecording = false;
+function recordBeat() {
+    isRecording = true;
+    beatTones = [];
 }
-*/
-// Hier werden die Funktionen "definiert":
-function foo() {
-    console.log("Hello :)");
+function deleteBeat() {
+    isRecording = false;
+    beatTones = [];
 }
-var bar = function () {
-    console.log("Hello :)");
-};
-var baz = function () {
-    console.log("Hello :)");
-};
-// Jetzt werden die Funktionen "aufgerufen" oder "ausgeführt":
-foo();
-bar();
-baz();
-var index = 0;
 var myInterval;
 var switchPlay = document.querySelector('.FlexPlayButton');
 var switchPause = document.querySelector('.FlexPauseButton');
-var Beat = [ButtonPlay1, ButtonPlay2, ButtonPlay3];
-document.querySelector(".FlexPlayButton").addEventListener("click", function () {
-    myInterval = setInterval(function () {
-        if (index <= 2) {
-            Beat[index].play();
-            index++;
-        }
-        else {
-            index = 0;
-            Beat[index].play();
-            index++;
-        }
-    }, 600);
+/*var Beat : HTMLAudioElement[] = [ButtonPlay1, ButtonPlay2,ButtonPlay3];*/
+var beatTones = [ButtonPlay1, ButtonPlay2, ButtonPlay3];
+function addToList(varAudioEl) {
+    if (isRecording == true) {
+        beatTones.push(varAudioEl);
+    }
+    console.log("List is now: ", beatTones);
+}
+document.querySelector(".FlexButton1").addEventListener("click", function () { addToList(ButtonPlay1); });
+document.querySelector(".FlexButton2").addEventListener("click", function () { addToList(ButtonPlay2); });
+document.querySelector(".FlexButton3").addEventListener("click", function () { addToList(ButtonPlay3); });
+document.querySelector(".FlexButton4").addEventListener("click", function () { addToList(ButtonPlay4); });
+document.querySelector(".FlexButton5").addEventListener("click", function () { addToList(ButtonPlay5); });
+document.querySelector(".FlexButton6").addEventListener("click", function () { addToList(ButtonPlay6); });
+document.querySelector(".FlexButton7").addEventListener("click", function () { addToList(ButtonPlay7); });
+document.querySelector(".FlexButton8").addEventListener("click", function () { addToList(ButtonPlay8); });
+document.querySelector(".FlexButton9").addEventListener("click", function () { addToList(ButtonPlay9); });
+document.querySelector("#MikroButton").addEventListener("click", recordBeat);
+document.querySelector("#DeleteButton").addEventListener("click", deleteBeat);
+function changeButton() {
     if (switchPlay.classList.contains('inactive')) {
         switchPlay.classList.remove('inactive');
-        switchPause.classList.add('innactive');
+        switchPause.classList.add('inactive');
         clearInterval(myInterval);
     }
     else {
         switchPlay.classList.add('inactive');
         switchPause.classList.remove('inactive');
     }
+}
+var index = 0;
+document.querySelector(".FlexPlayButton").addEventListener("click", function () {
+    myInterval = setInterval(function () {
+        if (index < beatTones.length) {
+            beatTones[index].play();
+            index++;
+        }
+        else {
+            index = 0;
+            beatTones[index].play();
+            index++;
+        }
+    }, 600);
+    changeButton();
 });
-document.querySelector(".FlexPauseButton").addEventListener("click", function () {
-    if (switchPlay.classList.contains('inactive')) {
-        switchPlay.classList.remove('inactive');
-        switchPause.classList.add('inactive');
-        clearInterval(myInterval);
-    }
-    else {
-        switchPlay.classList.add('inactive');
-        switchPause.classList.add('inactive');
-    }
-});
-console.log(switchPlay.getAttribute('class'));
+document.querySelector(".FlexPauseButton").addEventListener("click", changeButton);
 //# sourceMappingURL=08_script.js.map
