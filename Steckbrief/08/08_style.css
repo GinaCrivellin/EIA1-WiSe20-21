@@ -257,3 +257,11 @@ nav{
     left: -145px;
     top: -255px;
 }
+
+.Keyboard{
+    position: relative;
+    height: 170px;
+    width: 450px;
+    left: 0px;
+    top: -670px;
+}
