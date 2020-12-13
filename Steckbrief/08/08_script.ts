@@ -81,7 +81,7 @@ document.querySelector(".FlexButton8").addEventListener("click", function() { ad
 document.querySelector(".FlexButton9").addEventListener("click", function() { addToList(ButtonPlay9); });
 
 
-document.querySelector("#MikroButton").addEventListener("click", recordBeat)
+document.querySelector("#MikroButton").addEventListener("click", recordBeat);
 document.querySelector("#DeleteButton").addEventListener("click", deleteBeat)
 
 function changeButton () {
@@ -99,7 +99,7 @@ function changeButton () {
 
 var index = 0;
 
-document.querySelector(".FlexPlayButton").addEventListener("click", intervalFunction)
+document.querySelector(".FlexPlayButton").addEventListener("click", intervalFunction);
 
 function intervalFunction () {
     myInterval = setInterval(() => {
@@ -121,57 +121,3 @@ function intervalFunction () {
 document.querySelector(".FlexPauseButton").addEventListener("click", changeButton);
 
 //KeyPress Function ab hier
-
-document.addEventListener("keyup", (e) => {
-    if (e.code === "KeyP") {
-        intervalFunction();
-    }
-
-    if (e.code === "KeyS") {
-        changeButton();
-    }
-
-    if (e.code === "ArrowUp") {
-        recordBeat();
-    }
-
-    if (e.code === "ArrowDown") {
-        deleteBeat();
-    }
-
-    if (e.code === "KeyQ") {
-        ButtonPlay1.play();
-    }
-
-    if (e.code === "KeyW") {
-        ButtonPlay2.play();
-    }
-
-    if (e.code === "KeyE") {
-        ButtonPlay3.play();
-    }
-
-    if (e.code === "KeyR") {
-        ButtonPlay4.play();
-    }
-
-    if (e.code === "KeyT") {
-        ButtonPlay5.play();
-    }
-
-    if (e.code === "KeyZ") {
-        ButtonPlay6.play();
-    }
-
-    if (e.code === "KeyU") {
-        ButtonPlay7.play();
-    }
-
-    if (e.code === "KeyI") {
-        ButtonPlay8.play();
-    }
-
-    if (e.code === "KeyO") {
-        ButtonPlay9.play();
-    }  
-})

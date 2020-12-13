@@ -79,45 +79,4 @@ function intervalFunction() {
 }
 document.querySelector(".FlexPauseButton").addEventListener("click", changeButton);
 //KeyPress Function ab hier
-document.addEventListener("keyup", function (e) {
-    if (e.code === "KeyP") {
-        intervalFunction();
-    }
-    if (e.code === "KeyS") {
-        changeButton();
-    }
-    if (e.code === "ArrowUp") {
-        recordBeat();
-    }
-    if (e.code === "ArrowDown") {
-        deleteBeat();
-    }
-    if (e.code === "KeyQ") {
-        ButtonPlay1.play();
-    }
-    if (e.code === "KeyW") {
-        ButtonPlay2.play();
-    }
-    if (e.code === "KeyE") {
-        ButtonPlay3.play();
-    }
-    if (e.code === "KeyR") {
-        ButtonPlay4.play();
-    }
-    if (e.code === "KeyT") {
-        ButtonPlay5.play();
-    }
-    if (e.code === "KeyZ") {
-        ButtonPlay6.play();
-    }
-    if (e.code === "KeyU") {
-        ButtonPlay7.play();
-    }
-    if (e.code === "KeyI") {
-        ButtonPlay8.play();
-    }
-    if (e.code === "KeyO") {
-        ButtonPlay9.play();
-    }
-});
 //# sourceMappingURL=08_script.js.map
