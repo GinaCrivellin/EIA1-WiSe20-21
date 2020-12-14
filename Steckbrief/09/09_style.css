@@ -1,0 +1,55 @@
+.Flexbox{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: absolute;
+    background-color: violet;
+    width: 500px;
+    height: 400px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.FlexTypeIn{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: absolute;
+    background-color: yellow;
+    width: 500px;
+    height: 100px;
+
+}
+
+.Flexitem{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: relative;
+    background-color: yellow;
+    width: 500px;
+    height: 100px;
+}
+
+.FlexButton{
+    display: flex;
+    position: absolute;
+    background-color: turquoise;
+    width: 100px;
+    height: 100px;
+
+}
+
+.FlexSchrift{
+    display: flex;
+    position: relative;
+    background-color: wheat;
+    width: 400px;
+    height: 100px;
+}
+
+.checkButton{
+    width: 300px;
+    height: 300px;
+}
