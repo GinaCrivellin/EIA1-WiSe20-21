@@ -1,7 +1,7 @@
 // Leere Liste
 var list = [];
 // Variable, die das eingegeben aus dem HTML aufnimmt
-var input = document.getElementById('myInput');
+var input = document.getElementById("myInput");
 // Funktion, die das aufgenommene Element pusht
 function addToList(event) {
     console.log(event);
@@ -15,3 +15,4 @@ console.log(list);
 //       console.log("Input received: ", event.target.value);
 //   }
 //   )
+//# sourceMappingURL=09_script.js.map

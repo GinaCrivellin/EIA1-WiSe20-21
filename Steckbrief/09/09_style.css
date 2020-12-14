@@ -1,3 +1,15 @@
+body{
+    background-color: rgb(151, 126, 151);
+}
+
+h1{
+    text-align: center;
+}
+
+h2{
+    text-align: center;
+}
+
 .Flexbox{
     display: flex;
     flex-direction: row;
@@ -11,17 +23,6 @@
     transform: translate(-50%, -50%);
 }
 
-.FlexTypeIn{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    position: absolute;
-    background-color: yellow;
-    width: 500px;
-    height: 100px;
-
-}
-
 .Flexitem{
     display: flex;
     flex-direction: row;
@@ -32,24 +33,22 @@
     height: 100px;
 }
 
-.FlexButton{
-    display: flex;
-    position: absolute;
-    background-color: turquoise;
-    width: 100px;
-    height: 100px;
-
-}
 
 .FlexSchrift{
+    align-items: center;
     display: flex;
     position: relative;
     background-color: wheat;
-    width: 400px;
+    width: 500px;
     height: 100px;
 }
 
 .checkButton{
     width: 300px;
     height: 300px;
+}
+
+#myInput{
+    width: 500px;
+    height: 90px; 
 }

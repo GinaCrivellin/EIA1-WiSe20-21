@@ -1,47 +1,47 @@
-var ButtonPlay1:HTMLAudioElement = new Audio('assets/hihat.mp3');
+var buttonPlay1: HTMLAudioElement = new Audio("assets/hihat.mp3");
 
-var ButtonPlay2:HTMLAudioElement = new Audio('assets/kick.mp3');
+var buttonPlay2: HTMLAudioElement = new Audio("assets/kick.mp3");
 
-var ButtonPlay3:HTMLAudioElement = new Audio('assets/snare.mp3');
+var buttonPlay3: HTMLAudioElement = new Audio("assets/snare.mp3");
 
-var ButtonPlay4:HTMLAudioElement = new Audio('assets/A.mp3');
+var buttonPlay4: HTMLAudioElement = new Audio("assets/A.mp3");
 
-var ButtonPlay5:HTMLAudioElement = new Audio('assets/C.mp3');
+var buttonPlay5: HTMLAudioElement = new Audio("assets/C.mp3");
 
-var ButtonPlay6:HTMLAudioElement = new Audio('assets/F.mp3');
+var buttonPlay6: HTMLAudioElement = new Audio("assets/F.mp3");
 
-var ButtonPlay7:HTMLAudioElement = new Audio('assets/G.mp3');
+var buttonPlay7: HTMLAudioElement = new Audio("assets/G.mp3");
 
-var ButtonPlay8:HTMLAudioElement = new Audio('assets/laugh-1.mp3');
+var buttonPlay8: HTMLAudioElement = new Audio("assets/laugh-1.mp3");
 
-var ButtonPlay9:HTMLAudioElement = new Audio('assets/laugh-2.mp3');
+var buttonPlay9: HTMLAudioElement = new Audio("assets/laugh-2.mp3");
 
-    function myFunction(VarButton: any){
-        VarButton.play();
-    }
+function myFunction(varButton: HTMLAudioElement) {
+varButton.play();
+}
 
-document.querySelector(".FlexButton1").addEventListener("click", myFunction.bind(null, ButtonPlay1));
+document.querySelector(".FlexButton1").addEventListener("click", myFunction.bind(null, buttonPlay1));
 
-document.querySelector(".FlexButton2").addEventListener("click", myFunction.bind(null, ButtonPlay2));
+document.querySelector(".FlexButton2").addEventListener("click", myFunction.bind(null, buttonPlay2));
 
-document.querySelector(".FlexButton3").addEventListener("click", myFunction.bind(null, ButtonPlay3));
+document.querySelector(".FlexButton3").addEventListener("click", myFunction.bind(null, buttonPlay3));
 
-document.querySelector(".FlexButton4").addEventListener("click", myFunction.bind(null, ButtonPlay4));
+document.querySelector(".FlexButton4").addEventListener("click", myFunction.bind(null, buttonPlay4));
 
-document.querySelector(".FlexButton5").addEventListener("click", myFunction.bind(null, ButtonPlay5));
+document.querySelector(".FlexButton5").addEventListener("click", myFunction.bind(null, buttonPlay5));
 
-document.querySelector(".FlexButton6").addEventListener("click", myFunction.bind(null, ButtonPlay6));
+document.querySelector(".FlexButton6").addEventListener("click", myFunction.bind(null, buttonPlay6));
 
-document.querySelector(".FlexButton7").addEventListener("click", myFunction.bind(null, ButtonPlay7));
+document.querySelector(".FlexButton7").addEventListener("click", myFunction.bind(null, buttonPlay7));
 
-document.querySelector(".FlexButton8").addEventListener("click", myFunction.bind(null, ButtonPlay8));
+document.querySelector(".FlexButton8").addEventListener("click", myFunction.bind(null, buttonPlay8));
 
-document.querySelector(".FlexButton9").addEventListener("click", myFunction.bind(null, ButtonPlay9));
+document.querySelector(".FlexButton9").addEventListener("click", myFunction.bind(null, buttonPlay9));
 
 
-var isRecording : boolean = false
+var isRecording: boolean = false;
 
-function recordBeat(){
+function recordBeat() {
     isRecording = true;
     beatTones = [];
 }
@@ -53,41 +53,41 @@ function deleteBeat(){
 
 
 
-var myInterval
+var myInterval: void ;
 
-var switchPlay:HTMLElement = document.querySelector('.FlexPlayButton');
-var switchPause:HTMLElement = document.querySelector('.FlexPauseButton');
+var switchPlay: HTMLElement = document.querySelector(".FlexPlayButton");
+var switchPause: HTMLElement = document.querySelector(".FlexPauseButton");
 
 /*var Beat : HTMLAudioElement[] = [ButtonPlay1, ButtonPlay2,ButtonPlay3];*/
 
-var beatTones : HTMLAudioElement[] = [ButtonPlay1, ButtonPlay2, ButtonPlay3]
+var beatTones: HTMLAudioElement[] = [buttonPlay1, buttonPlay2, buttonPlay3];
     
-function addToList (varAudioEl){
+function addToList (varAudioEl: HTMLAudioElement) {
     if (isRecording == true) {
-        beatTones.push(varAudioEl)
+        beatTones.push(varAudioEl);
     }
 
     console.log("List is now: ", beatTones);
 }
 
-document.querySelector(".FlexButton1").addEventListener("click", function() { addToList(ButtonPlay1); });
-document.querySelector(".FlexButton2").addEventListener("click", function() { addToList(ButtonPlay2); });
-document.querySelector(".FlexButton3").addEventListener("click", function() { addToList(ButtonPlay3); });
-document.querySelector(".FlexButton4").addEventListener("click", function() { addToList(ButtonPlay4); });
-document.querySelector(".FlexButton5").addEventListener("click", function() { addToList(ButtonPlay5); });
-document.querySelector(".FlexButton6").addEventListener("click", function() { addToList(ButtonPlay6); });
-document.querySelector(".FlexButton7").addEventListener("click", function() { addToList(ButtonPlay7); });
-document.querySelector(".FlexButton8").addEventListener("click", function() { addToList(ButtonPlay8); });
-document.querySelector(".FlexButton9").addEventListener("click", function() { addToList(ButtonPlay9); });
+document.querySelector(".FlexButton1").addEventListener("click", function(): void { addToList(buttonPlay1); });
+document.querySelector(".FlexButton2").addEventListener("click", function(): void { addToList(buttonPlay2); });
+document.querySelector(".FlexButton3").addEventListener("click", function(): void  { addToList(buttonPlay3); });
+document.querySelector(".FlexButton4").addEventListener("click", function(): void  { addToList(buttonPlay4); });
+document.querySelector(".FlexButton5").addEventListener("click", function(): void  { addToList(buttonPlay5); });
+document.querySelector(".FlexButton6").addEventListener("click", function(): void  { addToList(buttonPlay6); });
+document.querySelector(".FlexButton7").addEventListener("click", function(): void  { addToList(buttonPlay7); });
+document.querySelector(".FlexButton8").addEventListener("click", function(): void  { addToList(buttonPlay8); });
+document.querySelector(".FlexButton9").addEventListener("click", function(): void { addToList(buttonPlay9); });
 
 
 document.querySelector("#MikroButton").addEventListener("click", recordBeat);
 document.querySelector("#DeleteButton").addEventListener("click", deleteBeat)
 
 function changeButton () {
-    if (switchPlay.classList.contains('inactive')){
-        switchPlay.classList.remove('inactive');
-        switchPause.classList.add('inactive');
+    if (switchPlay.classList.contains("inactive")) {
+        switchPlay.classList.remove("inactive");
+        switchPause.classList.add("inactive");
         clearInterval(myInterval);
     }
     
@@ -112,7 +112,7 @@ function intervalFunction () {
             beatTones[index].play(); 
             index++;
         }
-    }, 600);
+},600);
     
     changeButton();
 
