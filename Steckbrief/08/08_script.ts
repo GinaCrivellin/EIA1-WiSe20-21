@@ -16,7 +16,7 @@ var buttonPlay8: HTMLAudioElement = new Audio("assets/laugh-1.mp3");
 
 var buttonPlay9: HTMLAudioElement = new Audio("assets/laugh-2.mp3");
 
-function myFunction(varButton: HTMLAudioElement) {
+function myFunction (varButton: HTMLAudioElement): void {
 varButton.play();
 }
 
@@ -38,31 +38,29 @@ document.querySelector(".FlexButton8").addEventListener("click", myFunction.bind
 
 document.querySelector(".FlexButton9").addEventListener("click", myFunction.bind(null, buttonPlay9));
 
+var beatTones: HTMLAudioElement[] = [buttonPlay1, buttonPlay2, buttonPlay3];
 
 var isRecording: boolean = false;
 
-function recordBeat() {
+function recordBeat(): void {
     isRecording = true;
     beatTones = [];
 }
 
-function deleteBeat(){
+function deleteBeat(): void {
     isRecording = false;
     beatTones = [];
 }
 
 
 
-var myInterval: void ;
+var myInterval: number;
 
 var switchPlay: HTMLElement = document.querySelector(".FlexPlayButton");
 var switchPause: HTMLElement = document.querySelector(".FlexPauseButton");
 
-/*var Beat : HTMLAudioElement[] = [ButtonPlay1, ButtonPlay2,ButtonPlay3];*/
 
-var beatTones: HTMLAudioElement[] = [buttonPlay1, buttonPlay2, buttonPlay3];
-    
-function addToList (varAudioEl: HTMLAudioElement) {
+function addToList (varAudioEl: HTMLAudioElement): void {
     if (isRecording == true) {
         beatTones.push(varAudioEl);
     }
@@ -84,7 +82,7 @@ document.querySelector(".FlexButton9").addEventListener("click", function(): voi
 document.querySelector("#MikroButton").addEventListener("click", recordBeat);
 document.querySelector("#DeleteButton").addEventListener("click", deleteBeat)
 
-function changeButton () {
+function changeButton (): void {
     if (switchPlay.classList.contains("inactive")) {
         switchPlay.classList.remove("inactive");
         switchPause.classList.add("inactive");
@@ -92,16 +90,16 @@ function changeButton () {
     }
     
     else {
-        switchPlay.classList.add('inactive');
-        switchPause.classList.remove('inactive');
+        switchPlay.classList.add("inactive");
+        switchPause.classList.remove("inactive");
     }
 }
 
-var index = 0;
+var index: number = 0;
 
 document.querySelector(".FlexPlayButton").addEventListener("click", intervalFunction);
 
-function intervalFunction () {
+function intervalFunction (): void {
     myInterval = setInterval(() => {
         if (index < beatTones.length) {
             beatTones[index].play();
@@ -112,7 +110,7 @@ function intervalFunction () {
             beatTones[index].play(); 
             index++;
         }
-},600);
+},                           600);
     
     changeButton();
 

@@ -1,27 +1,29 @@
-// Leere Liste
-var list: string [] = [];
-
 // Variable, die das eingegeben aus dem HTML aufnimmt
-var input = document.getElementById("myInput");
+var input: HTMLElement = document.getElementById("myInput");
 
-// Funktion, die das aufgenommene Element pusht
-function addToList (event: any) {
-console.log(event);
-list.push(event);
+// Funktion, die den Text in ein Element packt
+function addToHTML (): void {
+
+    // Derzeitiges Element festlegen
+    var currentElement: string = (<HTMLInputElement>document.getElementById("myInput")).value;
+
+    // Variable, die neues Element erschafft
+    var newElement: HTMLElement = document.createElement("Task");
+
+    // Neues Element zum Body hinzufügen
+    document.body.appendChild(newElement);
+
+    // Neues Element wird gleich dem Inhalt des Alten gesetzt
+    newElement.innerHTML = currentElement;
+
+    console.log(currentElement);
 }
 
-// Event, dass bei Input die Funktion aufruft
-input.addEventListener("input", addToList)
+// Event, dass bei Enter press die Funktion aufruft
+input.addEventListener("keypress", (e) => {
+    if (e.code === "Enter") {
+        addToHTML();
+    }
 
-// Liste wird in Konsole ausgegeben
-console.log(list);
-
-
-
-
-
- //   input.addEventListener("input", (event) => {
- //       console.log("Input received: ", event.target.value);
- //   }
- //   )
-
+}
+);

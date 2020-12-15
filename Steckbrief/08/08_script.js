@@ -19,6 +19,7 @@ document.querySelector(".FlexButton6").addEventListener("click", myFunction.bind
 document.querySelector(".FlexButton7").addEventListener("click", myFunction.bind(null, buttonPlay7));
 document.querySelector(".FlexButton8").addEventListener("click", myFunction.bind(null, buttonPlay8));
 document.querySelector(".FlexButton9").addEventListener("click", myFunction.bind(null, buttonPlay9));
+var beatTones = [buttonPlay1, buttonPlay2, buttonPlay3];
 var isRecording = false;
 function recordBeat() {
     isRecording = true;
@@ -31,8 +32,6 @@ function deleteBeat() {
 var myInterval;
 var switchPlay = document.querySelector(".FlexPlayButton");
 var switchPause = document.querySelector(".FlexPauseButton");
-/*var Beat : HTMLAudioElement[] = [ButtonPlay1, ButtonPlay2,ButtonPlay3];*/
-var beatTones = [buttonPlay1, buttonPlay2, buttonPlay3];
 function addToList(varAudioEl) {
     if (isRecording == true) {
         beatTones.push(varAudioEl);
@@ -57,8 +56,8 @@ function changeButton() {
         clearInterval(myInterval);
     }
     else {
-        switchPlay.classList.add('inactive');
-        switchPause.classList.remove('inactive');
+        switchPlay.classList.add("inactive");
+        switchPause.classList.remove("inactive");
     }
 }
 var index = 0;
