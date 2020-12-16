@@ -15,7 +15,6 @@ h2{
     flex-direction: row;
     flex-wrap: wrap;
     position: absolute;
-    background-color: violet;
     width: 500px;
     height: 400px;
     top: 50%;
@@ -27,15 +26,25 @@ h2{
     align-items: center;
     display: flex;
     position: relative;
-    background-color: wheat;
     width: 500px;
     height: 100px;
 }
 
-.ul{
+.Task{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    align-items: center;
     position: relative;
-    background-color: turquoise;
+    display: flex;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 200%);
+    width: 500px;
+    height: 70px;
+    background-color: white;
+    margin: 5px, 5px;
+    border-bottom: 1px solid black;
 }
+
 
 .checkButton{
     width: 300px;
@@ -43,8 +52,8 @@ h2{
 }
 
 #myInput{
-    width: 400px;
-    height: 80px; 
+    width: 500px;
+    height: 70px; 
     border-radius: 20px;
     align-items: center;
 }
