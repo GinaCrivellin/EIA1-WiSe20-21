@@ -11,6 +11,8 @@ var index: number = 0;
 // Funktion, die den Text in ein Element packt
 function addToHTML (): void {
 
+    var wrapper: HTMLElement = document.getElementById("Flexbox");
+
     // Derzeitiges Element festlegen
     var currentElement: string = (<HTMLInputElement>document.getElementById("myInput")).value;
 
@@ -31,10 +33,10 @@ function addToHTML (): void {
     newCheckbox.className = "checkbox";
 
     // Neues Element(Task) zum Body hinzufügen
-    document.body.appendChild(newElement);
+    wrapper.appendChild(newElement);
     // Elemente zum Task hinzufügen
-    newElement.appendChild(trashIcon);
-    newElement.appendChild(newCheckbox);
+    wrapper.appendChild(trashIcon);
+    wrapper.appendChild(newCheckbox);
 
     trashIcon.addEventListener("click", function(): void {
         newElement.remove();

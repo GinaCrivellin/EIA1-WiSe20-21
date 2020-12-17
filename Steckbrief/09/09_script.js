@@ -7,6 +7,7 @@ var trashIcon = document.createElement("i");
 var index = 0;
 // Funktion, die den Text in ein Element packt
 function addToHTML() {
+    var wrapper = document.getElementById("Flexbox");
     // Derzeitiges Element festlegen
     var currentElement = document.getElementById("myInput").value;
     // Variable, die neues Element erschafft
@@ -20,10 +21,10 @@ function addToHTML() {
     newCheckbox.type = "checkbox";
     newCheckbox.className = "checkbox";
     // Neues Element(Task) zum Body hinzufügen
-    document.body.appendChild(newElement);
+    wrapper.appendChild(newElement);
     // Elemente zum Task hinzufügen
-    newElement.appendChild(trashIcon);
-    newElement.appendChild(newCheckbox);
+    wrapper.appendChild(trashIcon);
+    wrapper.appendChild(newCheckbox);
     trashIcon.addEventListener("click", function () {
         newElement.remove();
         index--;
