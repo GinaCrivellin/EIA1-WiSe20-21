@@ -25,7 +25,8 @@ function addToHTML() {
     newElement.appendChild(trashIcon);
     newElement.appendChild(newCheckbox);
     trashIcon.addEventListener("click", function () {
-        document.body.removeChild(newElement);
+        newElement.remove();
+        index--;
     });
 }
 // Löscht Zeile nach Enter

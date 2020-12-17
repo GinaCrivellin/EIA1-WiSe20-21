@@ -37,7 +37,8 @@ function addToHTML (): void {
     newElement.appendChild(newCheckbox);
 
     trashIcon.addEventListener("click", function(): void {
-        document.body.removeChild(newElement);
+        newElement.remove();
+        index--;
     }
     );
 }
