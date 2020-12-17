@@ -1,6 +1,13 @@
 // Variable, die das eingegeben aus dem HTML aufnimmt
 var input: HTMLElement = document.getElementById("myInput");
 
+var newElement: HTMLElement = document.createElement("li");
+
+let trashIcon: HTMLElement = document.createElement("i");
+
+// Index
+var index: number = 0;
+
 // Funktion, die den Text in ein Element packt
 function addToHTML (): void {
 
@@ -8,35 +15,44 @@ function addToHTML (): void {
     var currentElement: string = (<HTMLInputElement>document.getElementById("myInput")).value;
 
     // Variable, die neues Element erschafft
-    var newElement: HTMLElement = document.createElement("li");
+    var newElement: HTMLElement = document.createElement("label");
     
-    var newCheckbox: HTMLElement = document.createElement("checkbox");
+    var newCheckbox: HTMLInputElement = document.createElement("input");
+
+    let trashIcon: HTMLElement = document.createElement("i");
 
     // Neues Element wird gleich dem Inhalt des Alten gesetzt
     newElement.innerHTML = currentElement;
     newElement.className = "Task";
 
-    // Neues Element zum Body hinzufügen
+    trashIcon.className = "fas fa-trash-alt trash";
+
+    newCheckbox.type = "checkbox";
+    newCheckbox.className = "checkbox";
+
+    // Neues Element(Task) zum Body hinzufügen
     document.body.appendChild(newElement);
+    // Elemente zum Task hinzufügen
+    newElement.appendChild(trashIcon);
     newElement.appendChild(newCheckbox);
 
-    console.log(newCheckbox);
+    trashIcon.addEventListener("click", function(): void {
+        document.body.removeChild(newElement);
+    }
+    );
 }
-
 
 // Löscht Zeile nach Enter
 function clear(): void {
     (<HTMLInputElement>document.getElementById("myInput")).value = "";
 }
 
-// Index
-var index: number = 0;
-
 // Counter
 function counter(): void {
     document.querySelector("#counter").innerHTML = index + " open tasks";
 }
 
+// Counter immer am Anfang schon einmal ausführen
 counter();
 
 // Event, dass bei Enter press die Funktion aufruft+Zeile cleart+count anführt
@@ -48,6 +64,5 @@ input.addEventListener("keypress", (e) => {
         index++;
         counter();
     }
-
 }
 );
