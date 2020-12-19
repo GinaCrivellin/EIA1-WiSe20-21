@@ -15,7 +15,6 @@ h2{
 }
 
 .Flexbox{
-    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     position: absolute;
@@ -24,6 +23,10 @@ h2{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+ul{
+    padding-left: 0%;
 }
 
 .FlexSchrift{
@@ -41,13 +44,9 @@ h2{
     align-items: center;
     position: relative;
     display: flex;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, 200%);
-    width: 500px;
+    width: 480px;
     height: 70px;
     background-color: white;
-    margin: 5px, 5px;
     border-bottom: 1px solid black;
 }
 

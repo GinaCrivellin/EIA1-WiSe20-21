@@ -11,20 +11,22 @@ var index: number = 0;
 // Funktion, die den Text in ein Element packt
 function addToHTML (): void {
 
-    var wrapper: HTMLElement = document.getElementById("Flexbox");
+    var list: HTMLElement = document.getElementById("Task");
 
     // Derzeitiges Element festlegen
     var currentElement: string = (<HTMLInputElement>document.getElementById("myInput")).value;
 
     // Variable, die neues Element erschafft
-    var newElement: HTMLElement = document.createElement("label");
+    var newElement: HTMLElement = document.createElement("li");
+
+    var inputText: HTMLElement = document.createElement("label");
     
     var newCheckbox: HTMLInputElement = document.createElement("input");
 
     let trashIcon: HTMLElement = document.createElement("i");
 
     // Neues Element wird gleich dem Inhalt des Alten gesetzt
-    newElement.innerHTML = currentElement;
+    inputText.innerHTML = currentElement;
     newElement.className = "Task";
 
     trashIcon.className = "fas fa-trash-alt trash";
@@ -33,14 +35,16 @@ function addToHTML (): void {
     newCheckbox.className = "checkbox";
 
     // Neues Element(Task) zum Body hinzufügen
-    wrapper.appendChild(newElement);
+    list.appendChild(newElement);
     // Elemente zum Task hinzufügen
-    wrapper.appendChild(trashIcon);
-    wrapper.appendChild(newCheckbox);
+    newElement.appendChild(newCheckbox);
+    newElement.appendChild(inputText);
+    newElement.appendChild(trashIcon);
 
     trashIcon.addEventListener("click", function(): void {
         newElement.remove();
         index--;
+        counter();
     }
     );
 }

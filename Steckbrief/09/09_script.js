@@ -7,27 +7,30 @@ var trashIcon = document.createElement("i");
 var index = 0;
 // Funktion, die den Text in ein Element packt
 function addToHTML() {
-    var wrapper = document.getElementById("Flexbox");
+    var list = document.getElementById("Task");
     // Derzeitiges Element festlegen
     var currentElement = document.getElementById("myInput").value;
     // Variable, die neues Element erschafft
-    var newElement = document.createElement("label");
+    var newElement = document.createElement("li");
+    var inputText = document.createElement("label");
     var newCheckbox = document.createElement("input");
     var trashIcon = document.createElement("i");
     // Neues Element wird gleich dem Inhalt des Alten gesetzt
-    newElement.innerHTML = currentElement;
+    inputText.innerHTML = currentElement;
     newElement.className = "Task";
     trashIcon.className = "fas fa-trash-alt trash";
     newCheckbox.type = "checkbox";
     newCheckbox.className = "checkbox";
     // Neues Element(Task) zum Body hinzufügen
-    wrapper.appendChild(newElement);
+    list.appendChild(newElement);
     // Elemente zum Task hinzufügen
-    wrapper.appendChild(trashIcon);
-    wrapper.appendChild(newCheckbox);
+    newElement.appendChild(newCheckbox);
+    newElement.appendChild(inputText);
+    newElement.appendChild(trashIcon);
     trashIcon.addEventListener("click", function () {
         newElement.remove();
         index--;
+        counter();
     });
 }
 // Löscht Zeile nach Enter
