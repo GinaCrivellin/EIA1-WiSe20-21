@@ -54,6 +54,9 @@ ul{
 .checkbox{
     color: crimson;
     left: -100%;
+    border-radius: 20px;
+    margin: 3%;
+    transform: scale(2);
 }
 
 #myInput{
@@ -67,5 +70,10 @@ ul{
 .trash{
     position: absolute;
     left: 90%;
-    color: rgb(157, 125, 163);
+    font-size: 25px;
+    color: rgb(171, 137, 177);
+}
+
+.trash:hover {
+    color: rgb(115, 86, 121);
 }
