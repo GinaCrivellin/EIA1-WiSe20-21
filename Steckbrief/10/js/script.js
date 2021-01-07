@@ -102,7 +102,7 @@ function updateCounter() {
     var done = 0;
     var open = 0;
     for (var index = 0; index < myInterfaceVar.key2.length; index++) {
-        if (myInterfaceVar[index].key2.checked == true) {
+        if (myInterfaceVar[index].key2 == true) {
             done++;
         }
         else {

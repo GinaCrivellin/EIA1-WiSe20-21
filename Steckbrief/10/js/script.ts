@@ -120,7 +120,7 @@ function updateCounter(): void {
     let open: number = 0;
 
     for (let index: number = 0; index < myInterfaceVar.key2.length; index++) {
-        if (myInterfaceVar[index].key2.checked == true) {
+        if (myInterfaceVar[index].key2 == true) {
             done++;
         }
 
