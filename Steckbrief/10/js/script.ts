@@ -33,6 +33,8 @@ var inputDOMElement: HTMLInputElement;
 var addButtonDOMElement: HTMLElement;
 var todosDOMElement: HTMLElement;
 var counterDOMElement: HTMLElement;
+var doneDOMElement: HTMLElement;
+var openDOMElement: HTMLElement;
 
 /**
  * Sobald der DOM geladen wurde können grundlegende DOM-Interaktionen
@@ -49,6 +51,8 @@ window.addEventListener("load", function(): void {
     addButtonDOMElement = document.querySelector("#addButton");
     todosDOMElement = document.querySelector("#todos");
     counterDOMElement = document.querySelector("#counter");
+    doneDOMElement = document.querySelector("#done");
+    openDOMElement = document.querySelector("#open");
 
     /**
      * Jetzt da der DOM verfügbar ist kann auch ein Event-Listener
@@ -111,7 +115,25 @@ function drawListToDOM(): void {
 }
 
 function updateCounter(): void {
-    counterDOMElement.innerHTML = myInterfaceVar.key1.length + " in total";
+
+    let done: number = 0;
+    let open: number = 0;
+
+    for (let index: number = 0; index < myInterfaceVar.key2.length; index++) {
+        if (myInterfaceVar[index].key2.checked == true) {
+            done++;
+        }
+
+        else {
+            open++;
+        }
+
+        doneDOMElement.innerHTML = done + " done";
+        openDOMElement.innerHTML = open + " open";
+        counterDOMElement.innerHTML = myInterfaceVar.key1.length + " in total";
+
+
+    }
 }
 
 /**

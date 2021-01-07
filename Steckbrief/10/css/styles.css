@@ -1,6 +1,6 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background: rgba(215, 215, 215);
+    background-image: url(assets/bg.jpg);
 }
 
 main {
@@ -17,7 +17,7 @@ main {
     position: relative;
 }
 #inputTodo {
-    background: white;
+    background: rgb(255, 255, 255, 0.8);
     font-size: 20px;
     padding: 20px 50px;
     border: none;
@@ -36,7 +36,7 @@ main {
     background: none;
     border: none;
     outline: none;
-    color: grey;
+    color: rgb(157, 209, 205);
     cursor: pointer;
 }
 #addButton:hover {
@@ -52,7 +52,7 @@ main {
     position: relative;
     font-size: 20px;
     padding: 20px 50px;
-    background: white;
+    background: rgb(255, 255, 255, 1);
     border-bottom: 1px solid grey;
 }
 
@@ -78,7 +78,7 @@ main {
     position: absolute;
     right: 25px;
     top: 20px;
-    color: grey;
+    color:#F4C2C2;
     cursor: pointer;
 }
 
