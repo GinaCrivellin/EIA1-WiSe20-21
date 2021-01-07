@@ -102,15 +102,15 @@ function updateCounter() {
     var done = 0;
     var open = 0;
     for (var index = 0; index < myInterfaceVar.Checked.length; index++) {
-        if (myInterfaceVar[index].Checked == true) {
+        if (myInterfaceVar.Checked[index] == true) {
             done++;
         }
         else {
             open++;
         }
-        doneDOMElement.innerHTML = done + " done";
-        openDOMElement.innerHTML = open + " open";
-        counterDOMElement.innerHTML = myInterfaceVar.Text.length + " in total";
+        doneDOMElement.innerHTML = done + " Task(s) done";
+        openDOMElement.innerHTML = open + " Task(s) open";
+        counterDOMElement.innerHTML = myInterfaceVar.Text.length + " Task(s) in total";
     }
 }
 /**
