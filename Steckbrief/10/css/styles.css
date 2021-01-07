@@ -116,3 +116,7 @@ h1{
 .trash:hover {
     color: black;
 }
+
+.inactive{
+    display: none;
+}

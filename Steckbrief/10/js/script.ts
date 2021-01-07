@@ -116,10 +116,10 @@ function drawListToDOM(): void {
 
 function updateCounter(): void {
 
-   let done: number = 0;
-   let open: number = 0;
+    let done: number = 0;
+    let open: number = 0;
 
-   for (let index: number = 0; index < myInterfaceVar.Checked.length; index++) {
+    for (let index: number = 0; index < myInterfaceVar.Checked.length; index++) {
         if (myInterfaceVar.Checked[index] == true) {
             done++;
         }
@@ -132,7 +132,18 @@ function updateCounter(): void {
         openDOMElement.innerHTML = open + " Task(s) open";
 
         counterDOMElement.innerHTML = myInterfaceVar.Text.length + " Task(s) in total";
+    }
 
+    var allElementsTrue: boolean = true;
+
+//   for (var elem of myInterfaceVar.Checked) {
+    for (let index: number = 0; index < myInterfaceVar.Checked.length; index++) {
+        allElementsTrue = allElementsTrue && myInterfaceVar.Checked[index];
+    }
+
+    if (allElementsTrue == true) {
+        var smiley: HTMLCollection = document.getElementsByClassName("inactive");
+        smiley[0].classList.remove("inactive");
 
     }
 }

@@ -112,6 +112,15 @@ function updateCounter() {
         openDOMElement.innerHTML = open + " Task(s) open";
         counterDOMElement.innerHTML = myInterfaceVar.Text.length + " Task(s) in total";
     }
+    var allElementsTrue = true;
+    //   for (var elem of myInterfaceVar.Checked) {
+    for (var index = 0; index < myInterfaceVar.Checked.length; index++) {
+        allElementsTrue = allElementsTrue && myInterfaceVar.Checked[index];
+    }
+    if (allElementsTrue == true) {
+        var smiley = document.getElementsByClassName("inactive");
+        smiley[0].classList.remove("inactive");
+    }
 }
 /**
  * Ein neues ToDo wird folgendermaßen erstellt:
