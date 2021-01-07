@@ -9,6 +9,14 @@ main {
     text-align: center;
 }
 
+.text {
+    text-align: center;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    width: 500px;
+}
+
 #counter {
     color: grey;
 }

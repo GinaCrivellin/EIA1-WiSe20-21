@@ -13,13 +13,13 @@
  */
 
 interface MyInterface {
-    key1: string[];
-    key2: boolean[];
+    Text: string[];
+    Checked: boolean[];
 }
 
 var myInterfaceVar: MyInterface = {
-    key1: ["Lorem" , "Ipsum" , "Dolor"],
-    key2: [true, false, true]
+    Text: ["Lorem" , "Ipsum" , "Dolor"],
+    Checked: [true, false, true]
 };
 
 /**
@@ -72,7 +72,7 @@ function drawListToDOM(): void {
     todosDOMElement.innerHTML = "";
 
     // das ToDo-Array durchlaufen (iterieren) und Todo für Todo in den DOM schreiben
-    for (let index: number = 0; index < myInterfaceVar.key1.length; index++) {
+    for (let index: number = 0; index < myInterfaceVar.Text.length; index++) {
 
         /**
          * Neues DIV-Element erstellen (würde auch mit innerHTML = "<div class='todo'></div>" gehen, 
@@ -91,8 +91,8 @@ function drawListToDOM(): void {
          * ein Wert einer Variablen benötigt (bspw. für die CSS Klasse oder für den ToDo-Text),
          * hier muss die Zeichenkette unterbrochen werden.
          */
-        todo.innerHTML =  "<span class='check " + myInterfaceVar.key2[index] + "'><i class='fas fa-check'></i></span>"
-                            + myInterfaceVar.key1[index] +
+        todo.innerHTML =  "<span class='check " + myInterfaceVar.Checked[index] + "'><i class='fas fa-check'></i></span>"
+                            + myInterfaceVar.Text[index] +
                             "<span class='trash fas fa-trash-alt'></span>";
 
         // Zuweisen der Event-Listener für den Check- und den Trash-Button
@@ -116,11 +116,11 @@ function drawListToDOM(): void {
 
 function updateCounter(): void {
 
-    let done: number = 0;
-    let open: number = 0;
+   let done: number = 0;
+   let open: number = 0;
 
-    for (let index: number = 0; index < myInterfaceVar.key2.length; index++) {
-        if (myInterfaceVar[index].key2 == true) {
+   for (let index: number = 0; index < myInterfaceVar.Checked.length; index++) {
+        if (myInterfaceVar[index].Checked == true) {
             done++;
         }
 
@@ -130,11 +130,13 @@ function updateCounter(): void {
 
         doneDOMElement.innerHTML = done + " done";
         openDOMElement.innerHTML = open + " open";
-        counterDOMElement.innerHTML = myInterfaceVar.key1.length + " in total";
+
+        counterDOMElement.innerHTML = myInterfaceVar.Text.length + " in total";
 
 
     }
 }
+
 
 /**
  * Ein neues ToDo wird folgendermaßen erstellt:
@@ -153,8 +155,8 @@ function addTodo(): void {
          * Status der ToDos abbildet, für dieses ToDo (weil selbe Stelle im Array)
          * der Status "unchecked", hier false, gepusht.
          */
-        myInterfaceVar.key1.unshift(inputDOMElement.value);
-        myInterfaceVar.key2.unshift(false);
+        myInterfaceVar.Text.unshift(inputDOMElement.value);
+        myInterfaceVar.Checked.unshift(false);
         
         // Jetzt wird der Text aus dem Eingabefeld gelöscht
         inputDOMElement.value = "";
@@ -185,7 +187,7 @@ function toggleCheckState(index: number): void {
      * Alternativ könnte man hier natürlich auch andere Schreibweisen (wie sie im
      * Kurs behandelt wurden) nutzen.
      */
-    myInterfaceVar.key2[index] = !myInterfaceVar.key2[index];
+    myInterfaceVar.Checked[index] = !myInterfaceVar.Checked[index];
 
     /**
      * Die zentrale Funktion, um die Liste des ToDo-Arrays in den DOM zu rendern
@@ -204,8 +206,8 @@ function deleteTodo(index: number): void {
      * Jetzt muss diese Stelle beider Arrays gelöscht werden,
      * das ToDo-Text-Array und das Checked/Unchecked-Array
      */
-    myInterfaceVar.key1.splice(index, 1);
-    myInterfaceVar.key2.splice(index, 1);
+    myInterfaceVar.Text.splice(index, 1);
+    myInterfaceVar.Checked.splice(index, 1);
     
     /**
      * Die zentrale Funktion, um die Liste des ToDo-Arrays in den DOM zu rendern
