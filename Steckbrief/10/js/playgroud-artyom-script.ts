@@ -11,24 +11,34 @@ window.addEventListener("load", function(): void {
         }
     });
     
-    function startContinuousArtyom(): void {
-        artyom.fatality();
-    
-        setTimeout(
-            function(): void {
-                artyom.initialize({
-                    lang: "de-DE",
-                    continuous: true,
-                    listen: true,
-                    interimResults: true,
-                    debug: true
-                }).then(function(): void {
-                    console.log("Ready!");
-                });
-            }, 
-            250);
+    function startArtyom(): void {
+        artyom.initialize({
+            lang: "de-DE",
+            continuous: true,
+            listen: true,
+            interimResults: true,
+            debug: true
+        });
+
     }
+
+    function stopArtyom(): void {
+        artyom.fatality();
+    }
+
     
-    startContinuousArtyom();
+    startArtyom();
+
+    document.getElementById("Taskinput").addEventListener("click", function () {
+        startArtyom();
+        artyom.say("Tell me your task");
+
+    });
+
+    document.getElementById("stop").addEventListener("click", function () {
+        stopArtyom();
+        artyom.say("Artyom is stopped");
+
+    });
     
 });

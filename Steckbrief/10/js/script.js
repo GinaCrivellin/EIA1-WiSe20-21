@@ -192,4 +192,37 @@ function deleteTodo(index) {
      */
     drawListToDOM();
 }
+window.addEventListener("load", function () {
+    var artyom = new Artyom();
+    artyom.addCommands({
+        Text: ["erstelle Aufgabe *"],
+        Checked: true,
+        action: function (i, wildcard) {
+            console.log("Neue Aufgabe wird erstellt: " + wildcard);
+            myInterfaceVar.Text.unshift(wildcard);
+            myInterfaceVar.Checked.unshift(false);
+            drawListToDOM();
+        }
+    });
+    function startArtyom() {
+        artyom.initialize({
+            lang: "de-DE",
+            continuous: true,
+            listen: true,
+            interimResults: true,
+            debug: true
+        });
+    }
+    function stopArtyom() {
+        artyom.fatality();
+    }
+    document.getElementById("Mikro").addEventListener("click", function () {
+        startArtyom();
+        artyom.say("Tell me your task");
+    });
+    document.getElementById("Mikrostop").addEventListener("click", function () {
+        stopArtyom();
+        artyom.say("Artyom is stopped");
+    });
+});
 //# sourceMappingURL=script.js.map

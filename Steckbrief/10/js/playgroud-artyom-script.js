@@ -7,20 +7,26 @@ window.addEventListener("load", function () {
             console.log("Neue Aufgabe wird erstellt: " + wildcard);
         }
     });
-    function startContinuousArtyom() {
-        artyom.fatality();
-        setTimeout(function () {
-            artyom.initialize({
-                lang: "de-DE",
-                continuous: true,
-                listen: true,
-                interimResults: true,
-                debug: true
-            }).then(function () {
-                console.log("Ready!");
-            });
-        }, 250);
+    function startArtyom() {
+        artyom.initialize({
+            lang: "de-DE",
+            continuous: true,
+            listen: true,
+            interimResults: true,
+            debug: true
+        });
     }
-    startContinuousArtyom();
+    function stopArtyom() {
+        artyom.fatality();
+    }
+    startArtyom();
+    document.getElementById("Taskinput").addEventListener("click", function () {
+        startArtyom();
+        artyom.say("Tell me your task");
+    });
+    document.getElementById("stop").addEventListener("click", function () {
+        stopArtyom();
+        artyom.say("Artyom is stopped");
+    });
 });
 //# sourceMappingURL=playgroud-artyom-script.js.map
