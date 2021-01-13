@@ -11,7 +11,7 @@
  * Werte, bspw. Stelle 0 im Array todosText und Stelle 0 im Array
  * todosChecked gehören zusammen zu einem ToDo.
  */
-var myInterfaceVar = {
+var myTodoList = {
     Text: ["Lorem", "Ipsum", "Dolor"],
     Checked: [true, false, true]
 };
@@ -75,8 +75,8 @@ function drawListToDOM() {
          * ein Wert einer Variablen benötigt (bspw. für die CSS Klasse oder für den ToDo-Text),
          * hier muss die Zeichenkette unterbrochen werden.
          */
-        todo.innerHTML = "<span class='check " + myInterfaceVar.Checked[index] + "'><i class='fas fa-check'></i></span>"
-            + myInterfaceVar.Text[index] +
+        todo.innerHTML = "<span class='check " + myTodoList.Checked[index] + "'><i class='fas fa-check'></i></span>"
+            + myTodoList.Text[index] +
             "<span class='trash fas fa-trash-alt'></span>";
         // Zuweisen der Event-Listener für den Check- und den Trash-Button
         todo.querySelector(".check").addEventListener("click", function () {
@@ -93,7 +93,7 @@ function drawListToDOM() {
         todosDOMElement.appendChild(todo);
     };
     // das ToDo-Array durchlaufen (iterieren) und Todo für Todo in den DOM schreiben
-    for (var index = 0; index < myInterfaceVar.Text.length; index++) {
+    for (var index = 0; index < myTodoList.Text.length; index++) {
         _loop_1(index);
     }
     updateCounter();
@@ -101,8 +101,8 @@ function drawListToDOM() {
 function updateCounter() {
     var done = 0;
     var open = 0;
-    for (var index = 0; index < myInterfaceVar.Checked.length; index++) {
-        if (myInterfaceVar.Checked[index] == true) {
+    for (var index = 0; index < myTodoList.Checked.length; index++) {
+        if (myTodoList.Checked[index] == true) {
             done++;
         }
         else {
@@ -110,12 +110,12 @@ function updateCounter() {
         }
         doneDOMElement.innerHTML = done + " Task(s) done";
         openDOMElement.innerHTML = open + " Task(s) open";
-        counterDOMElement.innerHTML = myInterfaceVar.Text.length + " Task(s) in total";
+        counterDOMElement.innerHTML = myTodoList.Text.length + " Task(s) in total";
     }
     var allElementsTrue = true;
-    //   for (var elem of myInterfaceVar.Checked) {
-    for (var index = 0; index < myInterfaceVar.Checked.length; index++) {
-        allElementsTrue = allElementsTrue && myInterfaceVar.Checked[index];
+    //   for (var elem of myTodoList.Checked) {
+    for (var index = 0; index < myTodoList.Checked.length; index++) {
+        allElementsTrue = allElementsTrue && myTodoList.Checked[index];
     }
     if (allElementsTrue == true) {
         var smiley = document.getElementsByClassName("inactive");
@@ -139,8 +139,8 @@ function addTodo() {
          * Status der ToDos abbildet, für dieses ToDo (weil selbe Stelle im Array)
          * der Status "unchecked", hier false, gepusht.
          */
-        myInterfaceVar.Text.unshift(inputDOMElement.value);
-        myInterfaceVar.Checked.unshift(false);
+        myTodoList.Text.unshift(inputDOMElement.value);
+        myTodoList.Checked.unshift(false);
         // Jetzt wird der Text aus dem Eingabefeld gelöscht
         inputDOMElement.value = "";
         /**
@@ -167,7 +167,7 @@ function toggleCheckState(index) {
      * Alternativ könnte man hier natürlich auch andere Schreibweisen (wie sie im
      * Kurs behandelt wurden) nutzen.
      */
-    myInterfaceVar.Checked[index] = !myInterfaceVar.Checked[index];
+    myTodoList.Checked[index] = !myTodoList.Checked[index];
     /**
      * Die zentrale Funktion, um die Liste des ToDo-Arrays in den DOM zu rendern
      * wird wieder getriggert
@@ -184,8 +184,8 @@ function deleteTodo(index) {
      * Jetzt muss diese Stelle beider Arrays gelöscht werden,
      * das ToDo-Text-Array und das Checked/Unchecked-Array
      */
-    myInterfaceVar.Text.splice(index, 1);
-    myInterfaceVar.Checked.splice(index, 1);
+    myTodoList.Text.splice(index, 1);
+    myTodoList.Checked.splice(index, 1);
     /**
      * Die zentrale Funktion, um die Liste des ToDo-Arrays in den DOM zu rendern
      * wird wieder getriggert
@@ -195,12 +195,12 @@ function deleteTodo(index) {
 window.addEventListener("load", function () {
     var artyom = new Artyom();
     artyom.addCommands({
-        Text: ["erstelle Aufgabe *"],
-        Checked: true,
-        action: function (i, wildcard) {
-            console.log("Neue Aufgabe wird erstellt: " + wildcard);
-            myInterfaceVar.Text.unshift(wildcard);
-            myInterfaceVar.Checked.unshift(false);
+        indexes: ["erstelle Aufgabe *"],
+        smart: true,
+        action: function (wildcard, text) {
+            console.log("Neue Aufgabe wird erstellt: " + text);
+            myTodoList.Text.unshift(text);
+            myTodoList.Checked.unshift(false);
             drawListToDOM();
         }
     });
