@@ -197,7 +197,7 @@ window.addEventListener("load", function () {
     artyom.addCommands({
         indexes: ["erstelle Aufgabe *"],
         smart: true,
-        action: function (wildcard, text) {
+        action: function (i, text) {
             console.log("Neue Aufgabe wird erstellt: " + text);
             myTodoList.Text.unshift(text);
             myTodoList.Checked.unshift(false);
